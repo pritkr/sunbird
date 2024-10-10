@@ -1,0 +1,188 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:SCHOLAR-{MM}-{YYYY}-{##}",
+ "creation": "2024-10-03 16:40:04.566204",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "institute_id",
+  "student_id",
+  "student_name",
+  "type_of_student",
+  "scholarship_start_date",
+  "scholarship_end_date",
+  "sponsorship_to_be_paid_to",
+  "column_break_nbnz",
+  "tuition_fees",
+  "hostel_fees",
+  "nutrition_support_fees",
+  "others",
+  "scholarship_amount",
+  "scholarship_duration",
+  "purpose_of_scholarship",
+  "banking_details_section",
+  "name_of_the_account_holder",
+  "account_number",
+  "ifsc_code",
+  "account_of",
+  "column_break_tnre",
+  "branch",
+  "bank_name",
+  "image_of_pb_or_cheque"
+ ],
+ "fields": [
+  {
+   "fieldname": "institute_id",
+   "fieldtype": "Link",
+   "label": "Institute ID",
+   "options": "Institute Profile"
+  },
+  {
+   "fieldname": "column_break_nbnz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "student_id",
+   "fieldtype": "Link",
+   "label": "Student ID",
+   "options": "Student Profile"
+  },
+  {
+   "fetch_from": "student_id.student_name",
+   "fieldname": "student_name",
+   "fieldtype": "Link",
+   "label": "Student Name",
+   "options": "Student Profile"
+  },
+  {
+   "fieldname": "type_of_student",
+   "fieldtype": "Link",
+   "label": "Type of Student",
+   "options": "Type of Student"
+  },
+  {
+   "fieldname": "tuition_fees",
+   "fieldtype": "Int",
+   "label": "Tuition Fees"
+  },
+  {
+   "fieldname": "hostel_fees",
+   "fieldtype": "Int",
+   "label": "Hostel Fees"
+  },
+  {
+   "fieldname": "nutrition_support_fees",
+   "fieldtype": "Int",
+   "label": "Nutrition Support Fees"
+  },
+  {
+   "fieldname": "others",
+   "fieldtype": "Int",
+   "label": "Others"
+  },
+  {
+   "fieldname": "scholarship_amount",
+   "fieldtype": "Currency",
+   "label": "Scholarship Amount"
+  },
+  {
+   "fieldname": "scholarship_start_date",
+   "fieldtype": "Date",
+   "label": "Scholarship Start Date"
+  },
+  {
+   "fieldname": "scholarship_end_date",
+   "fieldtype": "Date",
+   "label": "Scholarship End Date"
+  },
+  {
+   "fieldname": "scholarship_duration",
+   "fieldtype": "Int",
+   "label": "Scholarship Duration"
+  },
+  {
+   "fieldname": "purpose_of_scholarship",
+   "fieldtype": "Select",
+   "label": "Purpose of Scholarship",
+   "options": "Tuition Fee\nHostel Fee\nNutrition Fee"
+  },
+  {
+   "fieldname": "sponsorship_to_be_paid_to",
+   "fieldtype": "Select",
+   "label": "Sponsorship to be Paid to",
+   "options": "School\nBeneficiary\nHostel"
+  },
+  {
+   "fieldname": "banking_details_section",
+   "fieldtype": "Section Break",
+   "label": "Banking Details"
+  },
+  {
+   "fieldname": "name_of_the_account_holder",
+   "fieldtype": "Data",
+   "label": "Name of the Account Holder"
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name"
+  },
+  {
+   "fieldname": "column_break_tnre",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Data",
+   "label": "Branch"
+  },
+  {
+   "fieldname": "account_number",
+   "fieldtype": "Data",
+   "label": "Account Number"
+  },
+  {
+   "fieldname": "ifsc_code",
+   "fieldtype": "Data",
+   "label": "IFSC Code "
+  },
+  {
+   "fieldname": "account_of",
+   "fieldtype": "Select",
+   "label": "Account of?",
+   "options": "Self\nFather\nMother\nInstitution (School/Hostel)\nOthers"
+  },
+  {
+   "fieldname": "image_of_pb_or_cheque",
+   "fieldtype": "Attach Image",
+   "label": "Image of PB or Cheque "
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-09 17:30:13.998594",
+ "modified_by": "Administrator",
+ "module": "Sunbird",
+ "name": "Scholarship Details",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "student_name"
+}

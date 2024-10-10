@@ -1,0 +1,526 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:STUD-{YYYY}-{##}",
+ "creation": "2024-10-02 23:51:45.174599",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "student_details_section",
+  "student_name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "mother_tongue",
+  "physical_disability",
+  "what_kind_of_disability",
+  "column_break_ugof",
+  "tribe",
+  "religion",
+  "village",
+  "district",
+  "state",
+  "photo",
+  "fathers_details",
+  "fathers_name",
+  "fathers_date_of_birth",
+  "fathers_mother_tongue",
+  "fathers_physical_disability",
+  "fathers_what_kind_of_disability",
+  "father_alive",
+  "column_break_hdsh",
+  "fathers_tribe",
+  "fathers_religion",
+  "fathers_village",
+  "education",
+  "occupation",
+  "mothers_details",
+  "mothers_name",
+  "mothers_date_of_birth",
+  "mothers_mother_tongue",
+  "mothers_physical_disability",
+  "mothers_what_kind_of_disability",
+  "mother_alive",
+  "column_break_wiuk",
+  "mothers_tribe",
+  "mothers_religion",
+  "mothers_village",
+  "mothers_education",
+  "mothers_occupation",
+  "guardian_details_section",
+  "guardian_name",
+  "date_of_birth__copy",
+  "relationship_with_student",
+  "column_break_ptrp",
+  "guardian_occupation",
+  "permanent_address",
+  "contact_information_of_the_family_section",
+  "student_phone_number",
+  "student_email_id",
+  "father_phone_number",
+  "father_email_id",
+  "column_break_vfrv",
+  "mother_phone_number",
+  "mother_email_id",
+  "guardian_phone_number",
+  "gaurdian_email_id",
+  "additional_contact_number_section",
+  "name1",
+  "column_break_gkzi",
+  "phone_number",
+  "recommended_for_sponsorship_by_section",
+  "full_name",
+  "contact_no",
+  "column_break_bxhe",
+  "relationship_with_student_additional",
+  "identification_documents_section",
+  "student_aadhaar_number",
+  "father_aadhaar_number",
+  "mother_aadhaar_number",
+  "column_break_tsnh",
+  "student_aadhaar_photo",
+  "father_aadhaar_photo",
+  "mother_aadhaar_photo",
+  "sibling_education_details_section",
+  "table_myuz"
+ ],
+ "fields": [
+  {
+   "fieldname": "student_details_section",
+   "fieldtype": "Section Break",
+   "label": "Student Details"
+  },
+  {
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "label": "Student Name"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "column_break_ugof",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tribe",
+   "fieldtype": "Link",
+   "label": "Tribe",
+   "options": "Tribe"
+  },
+  {
+   "fieldname": "religion",
+   "fieldtype": "Link",
+   "label": "Religion",
+   "options": "Religion"
+  },
+  {
+   "fieldname": "village",
+   "fieldtype": "Link",
+   "label": "Village",
+   "options": "Village"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "District"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State",
+   "options": "State"
+  },
+  {
+   "fieldname": "mother_tongue",
+   "fieldtype": "Data",
+   "label": "Mother Tongue"
+  },
+  {
+   "fieldname": "physical_disability",
+   "fieldtype": "Select",
+   "label": "Physical Disability",
+   "options": "No\nYes"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  },
+  {
+   "depends_on": "eval:doc.physical_disability==\"Yes\"",
+   "fieldname": "what_kind_of_disability",
+   "fieldtype": "Data",
+   "label": "What kind of disability?"
+  },
+  {
+   "fieldname": "fathers_details",
+   "fieldtype": "Section Break",
+   "label": "Father\u2019s Details"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "column_break_hdsh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fathers_date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "fathers_tribe",
+   "fieldtype": "Link",
+   "label": "Tribe",
+   "options": "Tribe"
+  },
+  {
+   "fieldname": "fathers_religion",
+   "fieldtype": "Link",
+   "label": "Religion",
+   "options": "Religion"
+  },
+  {
+   "fieldname": "fathers_village",
+   "fieldtype": "Link",
+   "label": "Village",
+   "options": "Village"
+  },
+  {
+   "depends_on": "eval:doc.fathers_physical_disability==\"Yes\"",
+   "fieldname": "fathers_what_kind_of_disability",
+   "fieldtype": "Data",
+   "label": "What kind of disability? "
+  },
+  {
+   "fieldname": "fathers_mother_tongue",
+   "fieldtype": "Data",
+   "label": "Mother Tongue "
+  },
+  {
+   "fieldname": "fathers_physical_disability",
+   "fieldtype": "Select",
+   "label": "Physical Disability ",
+   "options": "No\nYes"
+  },
+  {
+   "fieldname": "education",
+   "fieldtype": "Data",
+   "label": "Education"
+  },
+  {
+   "fieldname": "occupation",
+   "fieldtype": "Data",
+   "label": "Occupation"
+  },
+  {
+   "fieldname": "mothers_details",
+   "fieldtype": "Section Break",
+   "label": "Mother's Details"
+  },
+  {
+   "fieldname": "mothers_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "column_break_wiuk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "father_alive",
+   "fieldtype": "Select",
+   "label": "Alive",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "mothers_date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth "
+  },
+  {
+   "fieldname": "mothers_mother_tongue",
+   "fieldtype": "Data",
+   "label": "Mother Tongue  "
+  },
+  {
+   "fieldname": "mothers_physical_disability",
+   "fieldtype": "Select",
+   "label": "Physical Disability  ",
+   "options": "No\nYes"
+  },
+  {
+   "fieldname": "mother_alive",
+   "fieldtype": "Select",
+   "label": "Alive ",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "mothers_tribe",
+   "fieldtype": "Link",
+   "label": "Tribe ",
+   "options": "Tribe"
+  },
+  {
+   "fieldname": "mothers_religion",
+   "fieldtype": "Link",
+   "label": "Religion ",
+   "options": "Religion"
+  },
+  {
+   "fieldname": "mothers_village",
+   "fieldtype": "Link",
+   "label": "Village ",
+   "options": "Village"
+  },
+  {
+   "fieldname": "mothers_education",
+   "fieldtype": "Data",
+   "label": "Education "
+  },
+  {
+   "fieldname": "mothers_occupation",
+   "fieldtype": "Data",
+   "label": "Occupation "
+  },
+  {
+   "depends_on": "eval:doc.mothers_physical_disability==\"Yes\"",
+   "fieldname": "mothers_what_kind_of_disability",
+   "fieldtype": "Data",
+   "label": "What kind of disability?  "
+  },
+  {
+   "fieldname": "guardian_details_section",
+   "fieldtype": "Section Break",
+   "label": "Guardian Details"
+  },
+  {
+   "fieldname": "date_of_birth__copy",
+   "fieldtype": "Date",
+   "label": "Date of Birth "
+  },
+  {
+   "fieldname": "column_break_ptrp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "guardian_name",
+   "fieldtype": "Data",
+   "label": "Name "
+  },
+  {
+   "fieldname": "guardian_occupation",
+   "fieldtype": "Data",
+   "label": "Occupation  "
+  },
+  {
+   "fieldname": "relationship_with_student",
+   "fieldtype": "Select",
+   "label": "Relationship with student ",
+   "options": "Father\nMother\nBrother\nSister\nCousin"
+  },
+  {
+   "fieldname": "permanent_address",
+   "fieldtype": "Small Text",
+   "label": "Permanent Address",
+   "options": "Tribe"
+  },
+  {
+   "fieldname": "contact_information_of_the_family_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Information of the Family"
+  },
+  {
+   "fieldname": "student_phone_number",
+   "fieldtype": "Phone",
+   "label": "Student\u2019s Phone Number"
+  },
+  {
+   "fieldname": "column_break_vfrv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "student_email_id",
+   "fieldtype": "Data",
+   "label": "Student\u2019s Email ID",
+   "options": "Email"
+  },
+  {
+   "fieldname": "father_phone_number",
+   "fieldtype": "Phone",
+   "label": "Father's Phone Number"
+  },
+  {
+   "fieldname": "father_email_id",
+   "fieldtype": "Data",
+   "label": "Father\u2019s Email ID ",
+   "options": "Email"
+  },
+  {
+   "fieldname": "mother_phone_number",
+   "fieldtype": "Phone",
+   "label": "Mother's Phone Number "
+  },
+  {
+   "fieldname": "mother_email_id",
+   "fieldtype": "Data",
+   "label": "Mother\u2019s Email ID",
+   "options": "Email"
+  },
+  {
+   "fieldname": "guardian_phone_number",
+   "fieldtype": "Phone",
+   "label": "Guardian's Phone Number "
+  },
+  {
+   "fieldname": "gaurdian_email_id",
+   "fieldtype": "Data",
+   "label": "Gaurdian's Email ID",
+   "options": "Email"
+  },
+  {
+   "fieldname": "fathers_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "additional_contact_number_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Contact Number"
+  },
+  {
+   "fieldname": "column_break_gkzi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "recommended_for_sponsorship_by_section",
+   "fieldtype": "Section Break",
+   "label": "Recommended for Sponsorship by"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "relationship_with_student_additional",
+   "fieldtype": "Data",
+   "label": "Relationship with Student"
+  },
+  {
+   "fieldname": "column_break_bxhe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_no",
+   "fieldtype": "Phone",
+   "label": "Contact No"
+  },
+  {
+   "fieldname": "identification_documents_section",
+   "fieldtype": "Section Break",
+   "label": "Identification Documents"
+  },
+  {
+   "fieldname": "student_aadhaar_number",
+   "fieldtype": "Int",
+   "label": "Student's Aadhaar Number"
+  },
+  {
+   "fieldname": "column_break_tsnh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "student_aadhaar_photo",
+   "fieldtype": "Attach Image",
+   "label": "Student's Aadhaar Photo"
+  },
+  {
+   "fieldname": "father_aadhaar_number",
+   "fieldtype": "Int",
+   "label": "Father's Aadhaar Number "
+  },
+  {
+   "fieldname": "mother_aadhaar_number",
+   "fieldtype": "Int",
+   "label": "Mother's Aadhaar Number "
+  },
+  {
+   "fieldname": "father_aadhaar_photo",
+   "fieldtype": "Attach Image",
+   "label": "Father's Aadhaar Photo "
+  },
+  {
+   "fieldname": "mother_aadhaar_photo",
+   "fieldtype": "Attach Image",
+   "label": "Mother's Aadhaar Photo"
+  },
+  {
+   "fieldname": "sibling_education_details_section",
+   "fieldtype": "Section Break",
+   "label": "Sibling Education Details"
+  },
+  {
+   "fieldname": "table_myuz",
+   "fieldtype": "Table",
+   "options": "Sibling Education Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Student Educational Detail",
+   "link_fieldname": "student_id"
+  },
+  {
+   "link_doctype": "Scholarship Details",
+   "link_fieldname": "student_id"
+  }
+ ],
+ "modified": "2024-10-09 17:51:16.228045",
+ "modified_by": "Administrator",
+ "module": "Sunbird",
+ "name": "Student Profile",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "student_name"
+}

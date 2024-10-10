@@ -1,0 +1,301 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:student_name",
+ "creation": "2024-10-03 09:07:12.348779",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "student_id",
+  "student_name",
+  "school_name",
+  "school_address",
+  "school_contact_name",
+  "school_contact_number",
+  "school_contact_email",
+  "column_break_rjda",
+  "current_year_class",
+  "previous_academic_year_class",
+  "medium_of_instruction",
+  "board_affiliation",
+  "overall_percent_in_previous_year",
+  "top_three_subject_scores",
+  "table_jgtr",
+  "extra_curricular_interest_section",
+  "name_of_the_sports",
+  "arts",
+  "column_break_pqup",
+  "music",
+  "dreams_and_aspirations_section",
+  "dream_job",
+  "column_break_dtnt",
+  "column_break_cfhn",
+  "sponsorship_details_section",
+  "school_tuition_fees",
+  "approved_by_st",
+  "column_break_gbky",
+  "amount_requested_from_st",
+  "school_hostel_fees_section",
+  "hostel_requested_by_st",
+  "column_break_nfkg",
+  "hostel_approved_by_st",
+  "nutrition_support_fees_section",
+  "nutrition_amount_requested_from_st",
+  "column_break_dllo",
+  "nutrition_approved_by_st",
+  "others_section",
+  "others_amount_requested_from_st",
+  "total_approved_per_month",
+  "total_approved_for_the_year",
+  "column_break_knqf",
+  "others_approved_by_st",
+  "no_of_months_approved"
+ ],
+ "fields": [
+  {
+   "fieldname": "school_name",
+   "fieldtype": "Data",
+   "label": "School Name"
+  },
+  {
+   "fieldname": "school_address",
+   "fieldtype": "Small Text",
+   "label": "School Address"
+  },
+  {
+   "fieldname": "school_contact_name",
+   "fieldtype": "Data",
+   "label": "School Contact Name"
+  },
+  {
+   "fieldname": "school_contact_number",
+   "fieldtype": "Phone",
+   "label": "School Contact Number"
+  },
+  {
+   "fieldname": "school_contact_email",
+   "fieldtype": "Data",
+   "label": "School Contact Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "column_break_rjda",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_year_class",
+   "fieldtype": "Data",
+   "label": "Current Year Class(with division)"
+  },
+  {
+   "fieldname": "previous_academic_year_class",
+   "fieldtype": "Data",
+   "label": "Previous Academic Year Class"
+  },
+  {
+   "fieldname": "medium_of_instruction",
+   "fieldtype": "Select",
+   "label": "Medium of Instruction",
+   "options": "English\nRegional Language"
+  },
+  {
+   "fieldname": "board_affiliation",
+   "fieldtype": "Data",
+   "label": "Board Affiliation"
+  },
+  {
+   "fieldname": "overall_percent_in_previous_year",
+   "fieldtype": "Percent",
+   "label": "Overall % scored in Previous Academic Year"
+  },
+  {
+   "fieldname": "top_three_subject_scores",
+   "fieldtype": "Section Break",
+   "label": "Top 3 Subject scores"
+  },
+  {
+   "fieldname": "table_jgtr",
+   "fieldtype": "Table",
+   "options": "Subject Scores"
+  },
+  {
+   "fieldname": "extra_curricular_interest_section",
+   "fieldtype": "Section Break",
+   "label": "Extra Curricular Interest"
+  },
+  {
+   "fieldname": "name_of_the_sports",
+   "fieldtype": "Data",
+   "label": "Name of the Sports"
+  },
+  {
+   "fieldname": "column_break_pqup",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "music",
+   "fieldtype": "Select",
+   "label": "Music ",
+   "options": "Instrument\nSinging\nBoth"
+  },
+  {
+   "fieldname": "arts",
+   "fieldtype": "Data",
+   "label": "Arts"
+  },
+  {
+   "fieldname": "dreams_and_aspirations_section",
+   "fieldtype": "Section Break",
+   "label": "Dreams and Aspirations"
+  },
+  {
+   "fieldname": "dream_job",
+   "fieldtype": "Data",
+   "label": "Dream Job"
+  },
+  {
+   "fieldname": "column_break_dtnt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_cfhn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sponsorship_details_section",
+   "fieldtype": "Section Break",
+   "label": "Sponsorship Details"
+  },
+  {
+   "fieldname": "school_tuition_fees",
+   "fieldtype": "Int",
+   "label": "School Tuition Fees"
+  },
+  {
+   "fieldname": "approved_by_st",
+   "fieldtype": "Int",
+   "label": "Approved by ST"
+  },
+  {
+   "fieldname": "column_break_gbky",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount_requested_from_st",
+   "fieldtype": "Int",
+   "label": "Amount Requested from ST"
+  },
+  {
+   "fieldname": "school_hostel_fees_section",
+   "fieldtype": "Section Break",
+   "label": "School Hostel Fees"
+  },
+  {
+   "fieldname": "hostel_requested_by_st",
+   "fieldtype": "Int",
+   "label": "Amount Requested from ST"
+  },
+  {
+   "fieldname": "column_break_nfkg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hostel_approved_by_st",
+   "fieldtype": "Int",
+   "label": "Approved by ST"
+  },
+  {
+   "fieldname": "nutrition_support_fees_section",
+   "fieldtype": "Section Break",
+   "label": "Nutrition Support fees"
+  },
+  {
+   "fieldname": "nutrition_amount_requested_from_st",
+   "fieldtype": "Int",
+   "label": "Amount Requested from ST"
+  },
+  {
+   "fieldname": "column_break_dllo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nutrition_approved_by_st",
+   "fieldtype": "Int",
+   "label": "Approved by ST"
+  },
+  {
+   "fieldname": "others_section",
+   "fieldtype": "Section Break",
+   "label": "Others"
+  },
+  {
+   "fieldname": "others_amount_requested_from_st",
+   "fieldtype": "Int",
+   "label": "Amount Requested from ST"
+  },
+  {
+   "fieldname": "column_break_knqf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "others_approved_by_st",
+   "fieldtype": "Int",
+   "label": "Approved by ST"
+  },
+  {
+   "fieldname": "total_approved_per_month",
+   "fieldtype": "Int",
+   "label": "Total Approved Per Month"
+  },
+  {
+   "fieldname": "no_of_months_approved",
+   "fieldtype": "Int",
+   "label": "No of Months Approved"
+  },
+  {
+   "fieldname": "total_approved_for_the_year",
+   "fieldtype": "Int",
+   "label": "Total Approved for the Year"
+  },
+  {
+   "fieldname": "student_id",
+   "fieldtype": "Link",
+   "label": "Student ID",
+   "options": "Student Profile"
+  },
+  {
+   "fetch_from": "student_id.student_name",
+   "fetch_if_empty": 1,
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "label": "Student Name",
+   "unique": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-09 17:50:42.867523",
+ "modified_by": "Administrator",
+ "module": "Sunbird",
+ "name": "Student Educational Detail",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "student_name"
+}

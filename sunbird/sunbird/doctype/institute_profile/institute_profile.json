@@ -1,0 +1,236 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:INST-{YYYY}-{##}",
+ "creation": "2024-10-01 12:25:25.124162",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "institute_name",
+  "type_of_institution",
+  "year_of_establishment",
+  "purpose_of_establishment",
+  "column_break_nusx",
+  "address",
+  "village",
+  "district",
+  "state",
+  "section_break_cbfr",
+  "board_affiliation",
+  "medium_of_instruction",
+  "year_of_partnership_with_sunbird",
+  "institution_founder",
+  "principal_name",
+  "institution_photos",
+  "institute_poc",
+  "phone_number",
+  "email_id",
+  "mou_status",
+  "mou_pdf_upload",
+  "column_break_qsnh",
+  "is_the_school_part_of_a_registered_trustsociety",
+  "attachments",
+  "bank_account_of",
+  "bank_name",
+  "branch",
+  "name_of_the_account_holder",
+  "account_number",
+  "ifsc",
+  "upload_photocopy_of_passbookcancelled_cheque"
+ ],
+ "fields": [
+  {
+   "fieldname": "institute_name",
+   "fieldtype": "Data",
+   "label": "Institute Name"
+  },
+  {
+   "fieldname": "column_break_nusx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "type_of_institution",
+   "fieldtype": "Link",
+   "label": "Type of Institution",
+   "options": "Type of Institution"
+  },
+  {
+   "fieldname": "village",
+   "fieldtype": "Link",
+   "label": "Village",
+   "options": "Village"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "District"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State",
+   "options": "State"
+  },
+  {
+   "fieldname": "year_of_establishment",
+   "fieldtype": "Date",
+   "label": "Year of Establishment"
+  },
+  {
+   "fieldname": "purpose_of_establishment",
+   "fieldtype": "Small Text",
+   "label": "Purpose of Establishment"
+  },
+  {
+   "fieldname": "section_break_cbfr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "board_affiliation",
+   "fieldtype": "Link",
+   "label": "Board Affiliation",
+   "options": "Board Affiliation"
+  },
+  {
+   "fieldname": "column_break_qsnh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "medium_of_instruction",
+   "fieldtype": "Select",
+   "label": "Medium of Instruction",
+   "options": "English\nRegional Language"
+  },
+  {
+   "fieldname": "year_of_partnership_with_sunbird",
+   "fieldtype": "Date",
+   "label": "Year of Partnership with Sunbird"
+  },
+  {
+   "fieldname": "institution_founder",
+   "fieldtype": "Data",
+   "label": "Institution Founder"
+  },
+  {
+   "fieldname": "principal_name",
+   "fieldtype": "Data",
+   "label": "Principal Name"
+  },
+  {
+   "fieldname": "institution_photos",
+   "fieldtype": "Attach Image",
+   "label": "Institution Photos"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_the_school_part_of_a_registered_trustsociety",
+   "fieldtype": "Check",
+   "label": "Is the school part of a registered Trust/Society?"
+  },
+  {
+   "fieldname": "bank_account_of",
+   "fieldtype": "Select",
+   "label": "Bank Account of",
+   "options": "Institution\nTrust"
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Data",
+   "label": "Branch"
+  },
+  {
+   "fieldname": "account_number",
+   "fieldtype": "Int",
+   "label": "Account Number"
+  },
+  {
+   "fieldname": "name_of_the_account_holder",
+   "fieldtype": "Data",
+   "label": "Name of the Account Holder"
+  },
+  {
+   "fieldname": "ifsc",
+   "fieldtype": "Data",
+   "label": "IFSC"
+  },
+  {
+   "fieldname": "upload_photocopy_of_passbookcancelled_cheque",
+   "fieldtype": "Attach",
+   "label": "Upload photocopy of passbook/cancelled cheque"
+  },
+  {
+   "fieldname": "mou_status",
+   "fieldtype": "Select",
+   "label": "MoU Status",
+   "options": "No\nYes"
+  },
+  {
+   "depends_on": "eval:doc.mou_status=='Yes'",
+   "fieldname": "mou_pdf_upload",
+   "fieldtype": "Attach",
+   "label": "MOU PDF upload"
+  },
+  {
+   "fieldname": "institute_poc",
+   "fieldtype": "Link",
+   "label": "Institute POC",
+   "options": "Institute POC"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email ID",
+   "options": "Email"
+  },
+  {
+   "depends_on": "eval:doc.is_the_school_part_of_a_registered_trustsociety\r\n",
+   "fieldname": "attachments",
+   "fieldtype": "Table",
+   "label": "Attachments",
+   "options": "Attachments"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-09 18:08:30.158575",
+ "modified_by": "Administrator",
+ "module": "Sunbird",
+ "name": "Institute Profile",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "institute_name"
+}

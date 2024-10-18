@@ -23,6 +23,7 @@
   "principal_name",
   "institution_photos",
   "institute_poc",
+  "institute_user_id",
   "phone_number",
   "email_id",
   "mou_status",
@@ -66,12 +67,14 @@
    "options": "Village"
   },
   {
+   "fetch_from": "village.district",
    "fieldname": "district",
    "fieldtype": "Link",
    "label": "District",
    "options": "District"
   },
   {
+   "fetch_from": "village.state",
    "fieldname": "state",
    "fieldtype": "Link",
    "label": "State",
@@ -179,7 +182,7 @@
    "depends_on": "eval:doc.mou_status=='Yes'",
    "fieldname": "mou_pdf_upload",
    "fieldtype": "Attach",
-   "label": "MOU PDF upload"
+   "label": "MoU PDF upload"
   },
   {
    "fieldname": "institute_poc",
@@ -205,11 +208,18 @@
    "fieldtype": "Table",
    "label": "Attachments",
    "options": "Attachments"
+  },
+  {
+   "fetch_from": "institute_poc.user_id",
+   "fieldname": "institute_user_id",
+   "fieldtype": "Link",
+   "label": "Institute User ID",
+   "options": "User"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-09 18:08:30.158575",
+ "modified": "2024-10-14 13:27:24.849883",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Institute Profile",
@@ -227,8 +237,34 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sunbird Staff Member",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Institute POC",
+   "select": 1,
+   "share": 1,
+   "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],

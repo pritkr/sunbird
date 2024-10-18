@@ -1,27 +1,27 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:tribe",
- "creation": "2024-10-02 23:57:34.941049",
+ "autoname": "field:type_of_sponsorship",
+ "creation": "2024-10-10 14:45:31.708542",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "tribe"
+  "type_of_sponsorship"
  ],
  "fields": [
   {
-   "fieldname": "tribe",
+   "fieldname": "type_of_sponsorship",
    "fieldtype": "Data",
-   "label": "Tribe",
+   "label": "Type of Sponsorship",
    "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-14 13:05:42.401683",
+ "modified": "2024-10-14 13:03:46.227264",
  "modified_by": "Administrator",
  "module": "Sunbird",
- "name": "Tribe",
+ "name": "Type of Sponsorship",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
@@ -51,5 +51,5 @@
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],
- "title_field": "tribe"
+ "title_field": "type_of_sponsorship"
 }

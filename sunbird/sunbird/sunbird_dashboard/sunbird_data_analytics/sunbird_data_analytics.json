@@ -1,0 +1,62 @@
+{
+ "cards": [
+  {
+   "card": "Total amount of sponsorship"
+  },
+  {
+   "card": "Total number of Tuition fee-sponsored students"
+  },
+  {
+   "card": "Total number of Hostel fee-sponsored students"
+  },
+  {
+   "card": "Total number of Tuition fee-sponsored students"
+  },
+  {
+   "card": "Total number of  higher education students sponsored"
+  },
+  {
+   "card": "Total number of school students sponsored"
+  },
+  {
+   "card": "Total number of students sponsored"
+  },
+  {
+   "card": "Total number of partner schools supported"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Students based on Institution",
+   "width": "Half"
+  },
+  {
+   "chart": "Institutions based on Board of Affiliation",
+   "width": "Half"
+  },
+  {
+   "chart": "Students Sponsorship",
+   "width": "Half"
+  },
+  {
+   "chart": "Total Scholorship Value",
+   "width": "Half"
+  },
+  {
+   "chart": "Total Scholarship Recieved",
+   "width": "Half"
+  }
+ ],
+ "creation": "2024-10-14 11:52:34.126862",
+ "dashboard_name": "Sunbird Data Analytics",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 3,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2024-10-14 12:08:55.059684",
+ "modified_by": "Administrator",
+ "module": "Sunbird",
+ "name": "Sunbird Data Analytics",
+ "owner": "Administrator"
+}

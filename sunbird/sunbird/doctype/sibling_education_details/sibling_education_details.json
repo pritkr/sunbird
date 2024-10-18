@@ -33,10 +33,12 @@
    "label": "Education"
   },
   {
+   "default": "N/A",
    "fieldname": "whether_st_beneficiary",
    "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "Whether ST beneficiary?"
+   "label": "Whether ST beneficiary?",
+   "options": "Yes\nNo\nN/A"
   },
   {
    "fieldname": "relationship",
@@ -49,7 +51,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-10-09 17:24:17.986275",
+ "modified": "2024-10-10 13:04:59.534383",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Sibling Education Details",

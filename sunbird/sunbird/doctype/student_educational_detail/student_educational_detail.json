@@ -1,19 +1,20 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:student_name",
+ "autoname": "format: {student_name}-{YYYY}",
  "creation": "2024-10-03 09:07:12.348779",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "student_id",
+  "school_id",
   "student_name",
-  "school_name",
   "school_address",
   "school_contact_name",
-  "school_contact_number",
-  "school_contact_email",
+  "currently_active",
   "column_break_rjda",
+  "school_contact_email",
+  "school_contact_number",
   "current_year_class",
   "previous_academic_year_class",
   "medium_of_instruction",
@@ -32,32 +33,15 @@
   "column_break_cfhn",
   "sponsorship_details_section",
   "school_tuition_fees",
-  "approved_by_st",
-  "column_break_gbky",
   "amount_requested_from_st",
-  "school_hostel_fees_section",
   "hostel_requested_by_st",
-  "column_break_nfkg",
-  "hostel_approved_by_st",
-  "nutrition_support_fees_section",
   "nutrition_amount_requested_from_st",
-  "column_break_dllo",
-  "nutrition_approved_by_st",
-  "others_section",
-  "others_amount_requested_from_st",
-  "total_approved_per_month",
-  "total_approved_for_the_year",
-  "column_break_knqf",
-  "others_approved_by_st",
-  "no_of_months_approved"
+  "column_break_gbky",
+  "others_amount_requested_from_st"
  ],
  "fields": [
   {
-   "fieldname": "school_name",
-   "fieldtype": "Data",
-   "label": "School Name"
-  },
-  {
+   "fetch_from": "school_name.address",
    "fieldname": "school_address",
    "fieldtype": "Small Text",
    "label": "School Address"
@@ -99,9 +83,11 @@
    "options": "English\nRegional Language"
   },
   {
+   "fetch_from": "school_id.board_affiliation",
    "fieldname": "board_affiliation",
-   "fieldtype": "Data",
-   "label": "Board Affiliation"
+   "fieldtype": "Link",
+   "label": "Board Affiliation",
+   "options": "Board Affiliation"
   },
   {
    "fieldname": "overall_percent_in_previous_year",
@@ -164,17 +150,12 @@
   {
    "fieldname": "sponsorship_details_section",
    "fieldtype": "Section Break",
-   "label": "Sponsorship Details"
+   "label": "Sponsorship Request Details"
   },
   {
    "fieldname": "school_tuition_fees",
-   "fieldtype": "Int",
+   "fieldtype": "Currency",
    "label": "School Tuition Fees"
-  },
-  {
-   "fieldname": "approved_by_st",
-   "fieldtype": "Int",
-   "label": "Approved by ST"
   },
   {
    "fieldname": "column_break_gbky",
@@ -182,80 +163,23 @@
   },
   {
    "fieldname": "amount_requested_from_st",
-   "fieldtype": "Int",
-   "label": "Amount Requested from ST"
-  },
-  {
-   "fieldname": "school_hostel_fees_section",
-   "fieldtype": "Section Break",
-   "label": "School Hostel Fees"
+   "fieldtype": "Currency",
+   "label": "Tution Fee Requested"
   },
   {
    "fieldname": "hostel_requested_by_st",
-   "fieldtype": "Int",
-   "label": "Amount Requested from ST"
-  },
-  {
-   "fieldname": "column_break_nfkg",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "hostel_approved_by_st",
-   "fieldtype": "Int",
-   "label": "Approved by ST"
-  },
-  {
-   "fieldname": "nutrition_support_fees_section",
-   "fieldtype": "Section Break",
-   "label": "Nutrition Support fees"
+   "fieldtype": "Currency",
+   "label": "Hostel Fees Requested"
   },
   {
    "fieldname": "nutrition_amount_requested_from_st",
-   "fieldtype": "Int",
-   "label": "Amount Requested from ST"
-  },
-  {
-   "fieldname": "column_break_dllo",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "nutrition_approved_by_st",
-   "fieldtype": "Int",
-   "label": "Approved by ST"
-  },
-  {
-   "fieldname": "others_section",
-   "fieldtype": "Section Break",
-   "label": "Others"
+   "fieldtype": "Currency",
+   "label": "Nutrition Fees Requested"
   },
   {
    "fieldname": "others_amount_requested_from_st",
-   "fieldtype": "Int",
-   "label": "Amount Requested from ST"
-  },
-  {
-   "fieldname": "column_break_knqf",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "others_approved_by_st",
-   "fieldtype": "Int",
-   "label": "Approved by ST"
-  },
-  {
-   "fieldname": "total_approved_per_month",
-   "fieldtype": "Int",
-   "label": "Total Approved Per Month"
-  },
-  {
-   "fieldname": "no_of_months_approved",
-   "fieldtype": "Int",
-   "label": "No of Months Approved"
-  },
-  {
-   "fieldname": "total_approved_for_the_year",
-   "fieldtype": "Int",
-   "label": "Total Approved for the Year"
+   "fieldtype": "Currency",
+   "label": "Other Sponsorship Requested"
   },
   {
    "fieldname": "student_id",
@@ -268,17 +192,34 @@
    "fetch_if_empty": 1,
    "fieldname": "student_name",
    "fieldtype": "Data",
-   "label": "Student Name",
-   "unique": 1
+   "label": "Student Name"
+  },
+  {
+   "default": "0",
+   "fieldname": "currently_active",
+   "fieldtype": "Check",
+   "label": "Currently active"
+  },
+  {
+   "fieldname": "school_id",
+   "fieldtype": "Link",
+   "label": "School ID",
+   "link_filters": "[[\"Institute Profile\",\"type_of_institution\",\"=\",\"School\"]]",
+   "options": "Institute Profile"
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-10-09 17:50:42.867523",
+ "links": [
+  {
+   "link_doctype": "Scholarship Details",
+   "link_fieldname": "student_education"
+  }
+ ],
+ "modified": "2024-10-14 14:12:51.563815",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Student Educational Detail",
- "naming_rule": "By fieldname",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

@@ -14,6 +14,7 @@
   "mother_tongue",
   "physical_disability",
   "what_kind_of_disability",
+  "type_of_sponsorship",
   "column_break_ugof",
   "tribe",
   "religion",
@@ -21,6 +22,7 @@
   "district",
   "state",
   "photo",
+  "custodial_status",
   "fathers_details",
   "fathers_name",
   "fathers_date_of_birth",
@@ -107,8 +109,9 @@
   },
   {
    "fieldname": "gender",
-   "fieldtype": "Data",
-   "label": "Gender"
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender"
   },
   {
    "fieldname": "column_break_ugof",
@@ -133,12 +136,14 @@
    "options": "Village"
   },
   {
+   "fetch_from": "village.district",
    "fieldname": "district",
    "fieldtype": "Link",
    "label": "District",
    "options": "District"
   },
   {
+   "fetch_from": "village.state",
    "fieldname": "state",
    "fieldtype": "Link",
    "label": "State",
@@ -167,6 +172,7 @@
    "label": "What kind of disability?"
   },
   {
+   "depends_on": "eval:doc.custodial_status == 'Parent';",
    "fieldname": "fathers_details",
    "fieldtype": "Section Break",
    "label": "Father\u2019s Details"
@@ -231,6 +237,7 @@
    "label": "Occupation"
   },
   {
+   "depends_on": "eval:doc.custodial_status == 'PArent';",
    "fieldname": "mothers_details",
    "fieldtype": "Section Break",
    "label": "Mother's Details"
@@ -307,6 +314,7 @@
    "label": "What kind of disability?  "
   },
   {
+   "depends_on": "eval:doc.custodial_status == 'Guardian';",
    "fieldname": "guardian_details_section",
    "fieldtype": "Section Break",
    "label": "Guardian Details"
@@ -331,10 +339,12 @@
    "label": "Occupation  "
   },
   {
+   "default": "Relative",
    "fieldname": "relationship_with_student",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Relationship with student ",
-   "options": "Father\nMother\nBrother\nSister\nCousin"
+   "options": "Relative\nBrother\nSister\nCousin"
   },
   {
    "fieldname": "permanent_address",
@@ -445,7 +455,7 @@
   },
   {
    "fieldname": "student_aadhaar_number",
-   "fieldtype": "Int",
+   "fieldtype": "Data",
    "label": "Student's Aadhaar Number"
   },
   {
@@ -459,12 +469,12 @@
   },
   {
    "fieldname": "father_aadhaar_number",
-   "fieldtype": "Int",
+   "fieldtype": "Data",
    "label": "Father's Aadhaar Number "
   },
   {
    "fieldname": "mother_aadhaar_number",
-   "fieldtype": "Int",
+   "fieldtype": "Data",
    "label": "Mother's Aadhaar Number "
   },
   {
@@ -486,6 +496,18 @@
    "fieldname": "table_myuz",
    "fieldtype": "Table",
    "options": "Sibling Education Details"
+  },
+  {
+   "fieldname": "custodial_status",
+   "fieldtype": "Select",
+   "label": "Custodial Status",
+   "options": "Parent\nGuardian"
+  },
+  {
+   "fieldname": "type_of_sponsorship",
+   "fieldtype": "Link",
+   "label": "Type of Sponsorship",
+   "options": "Type of Sponsorship"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -499,7 +521,7 @@
    "link_fieldname": "student_id"
   }
  ],
- "modified": "2024-10-09 17:51:16.228045",
+ "modified": "2024-10-11 16:47:18.562843",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Student Profile",
@@ -515,6 +537,29 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Institute POC",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sunbird Staff Member",
    "share": 1,
    "write": 1
   }

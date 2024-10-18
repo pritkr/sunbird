@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:SCHOLAR-{MM}-{YYYY}-{##}",
+ "autoname": "format:{student_name}-{MM}-{YYYY}",
  "creation": "2024-10-03 16:40:04.566204",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -13,6 +13,7 @@
   "scholarship_start_date",
   "scholarship_end_date",
   "sponsorship_to_be_paid_to",
+  "total_amount_of_scholarship_recieving",
   "column_break_nbnz",
   "tuition_fees",
   "hostel_fees",
@@ -51,7 +52,7 @@
   {
    "fetch_from": "student_id.student_name",
    "fieldname": "student_name",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Student Name",
    "options": "Student Profile"
   },
@@ -157,11 +158,18 @@
    "fieldname": "image_of_pb_or_cheque",
    "fieldtype": "Attach Image",
    "label": "Image of PB or Cheque "
+  },
+  {
+   "default": "0",
+   "fieldname": "total_amount_of_scholarship_recieving",
+   "fieldtype": "Data",
+   "label": "Total Amount of Scholarship Recieving",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-09 17:30:13.998594",
+ "modified": "2024-10-11 16:12:17.055476",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Scholarship Details",
@@ -177,6 +185,27 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Institute POC",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sunbird Staff Member",
    "share": 1,
    "write": 1
   }

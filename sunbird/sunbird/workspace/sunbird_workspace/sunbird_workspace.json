@@ -1,0 +1,152 @@
+{
+ "app": "Sunbird",
+ "charts": [
+  {
+   "chart_name": "Students Sponsorship",
+   "label": "Students Sponsorship"
+  },
+  {
+   "chart_name": "Total Scholorship Value",
+   "label": "Total Scholorship Value"
+  }
+ ],
+ "content": "[{\"id\":\"pV61VP9iFs\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Sunbird Workspace</span>\",\"col\":12}},{\"id\":\"0MtIILWc2M\",\"type\":\"card\",\"data\":{\"card_name\":\"Institution Details\",\"col\":4}},{\"id\":\"5xkKhswayz\",\"type\":\"card\",\"data\":{\"card_name\":\"Student Details\",\"col\":4}},{\"id\":\"K6RGrqJKxd\",\"type\":\"card\",\"data\":{\"card_name\":\"Scholarship Details\",\"col\":4}},{\"id\":\"W3NPlaldZA\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Data Analysis</b></span>\",\"col\":12}},{\"id\":\"CGkg3N9h-k\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sunbird Data Analytics\",\"col\":5}},{\"id\":\"RgwfCtK-W-\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Students Sponsorship\",\"col\":12}},{\"id\":\"k9NSF0fJin\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Total Scholorship Value\",\"col\":12}}]",
+ "creation": "2024-10-14 11:41:51.484920",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "milestone",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Sunbird Workspace",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Institution Details",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Institute Profile",
+   "link_count": 0,
+   "link_to": "Institute Profile",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Institute POC",
+   "link_count": 0,
+   "link_to": "Institute POC",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Type of Institution",
+   "link_count": 0,
+   "link_to": "Type of Institution",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Scholarship Details",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Scholarship Details",
+   "link_count": 0,
+   "link_to": "Scholarship Details",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Student Details",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Student Profile",
+   "link_count": 0,
+   "link_to": "Student Profile",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Type of Student",
+   "link_count": 0,
+   "link_to": "Type of Student",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Student Educational Detail",
+   "link_count": 0,
+   "link_to": "Student Educational Detail",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-10-21 13:54:46.031121",
+ "modified_by": "Administrator",
+ "module": "Sunbird",
+ "name": "Sunbird Workspace",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Institute POC"
+  },
+  {
+   "role": "Sunbird Staff Member"
+  }
+ ],
+ "sequence_id": 23.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Sunbird Data Analytics",
+   "link_to": "Sunbird Data Analytics",
+   "type": "Dashboard"
+  }
+ ],
+ "title": "Sunbird Workspace"
+}

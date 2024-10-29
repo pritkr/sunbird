@@ -20,6 +20,7 @@
   "medium_of_instruction",
   "board_affiliation",
   "overall_percent_in_previous_year",
+  "date_of_student_added",
   "top_three_subject_scores",
   "table_jgtr",
   "extra_curricular_interest_section",
@@ -47,16 +48,19 @@
    "label": "School Address"
   },
   {
+   "fetch_from": "school_id.institute_poc",
    "fieldname": "school_contact_name",
    "fieldtype": "Data",
    "label": "School Contact Name"
   },
   {
+   "fetch_from": "school_id.phone_number",
    "fieldname": "school_contact_number",
    "fieldtype": "Phone",
    "label": "School Contact Number"
   },
   {
+   "fetch_from": "school_id.email_id",
    "fieldname": "school_contact_email",
    "fieldtype": "Data",
    "label": "School Contact Email",
@@ -184,6 +188,7 @@
   {
    "fieldname": "student_id",
    "fieldtype": "Link",
+   "in_global_search": 1,
    "label": "Student ID",
    "options": "Student Profile"
   },
@@ -192,6 +197,7 @@
    "fetch_if_empty": 1,
    "fieldname": "student_name",
    "fieldtype": "Data",
+   "in_global_search": 1,
    "label": "Student Name"
   },
   {
@@ -203,9 +209,16 @@
   {
    "fieldname": "school_id",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "School ID",
    "link_filters": "[[\"Institute Profile\",\"type_of_institution\",\"=\",\"School\"]]",
    "options": "Institute Profile"
+  },
+  {
+   "fieldname": "date_of_student_added",
+   "fieldtype": "Date",
+   "label": "Date of Student Added"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -215,7 +228,7 @@
    "link_fieldname": "student_education"
   }
  ],
- "modified": "2024-10-14 14:12:51.563815",
+ "modified": "2024-10-29 11:49:51.369068",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Student Educational Detail",

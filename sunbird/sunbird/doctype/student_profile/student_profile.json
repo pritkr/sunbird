@@ -95,6 +95,7 @@
   {
    "fieldname": "student_name",
    "fieldtype": "Data",
+   "in_global_search": 1,
    "label": "Student Name"
   },
   {
@@ -237,7 +238,7 @@
    "label": "Occupation"
   },
   {
-   "depends_on": "eval:doc.custodial_status == 'PArent';",
+   "depends_on": "eval:doc.custodial_status == 'Parent';",
    "fieldname": "mothers_details",
    "fieldtype": "Section Break",
    "label": "Mother's Details"
@@ -521,7 +522,7 @@
    "link_fieldname": "student_id"
   }
  ],
- "modified": "2024-10-11 16:47:18.562843",
+ "modified": "2024-10-29 11:36:07.707676",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Student Profile",

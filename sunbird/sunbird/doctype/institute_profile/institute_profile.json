@@ -113,6 +113,7 @@
   {
    "fieldname": "year_of_partnership_with_sunbird",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Year of Partnership with Sunbird"
   },
   {
@@ -218,8 +219,13 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-10-14 13:27:24.849883",
+ "links": [
+  {
+   "link_doctype": "Student Educational Detail",
+   "link_fieldname": "school_id"
+  }
+ ],
+ "modified": "2024-10-21 17:33:13.063082",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Institute Profile",

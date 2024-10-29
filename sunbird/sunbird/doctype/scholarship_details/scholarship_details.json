@@ -6,22 +6,36 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "student_details_section",
+  "student_education",
   "institute_id",
   "student_id",
   "student_name",
+  "column_break_nbnz",
   "type_of_student",
+  "current_class",
+  "section_break_caef",
+  "tuition_fees",
+  "tuition_fees_approved",
+  "nutrition_support_fees",
+  "nutrition_support_fees_approved",
+  "column_break_hysa",
+  "hostel_fees",
+  "hostel_fees_approved",
+  "others",
+  "other_sponsorship_approved",
+  "section_break_zhxl",
   "scholarship_start_date",
   "scholarship_end_date",
+  "purpose_of_scholarship",
   "sponsorship_to_be_paid_to",
-  "total_amount_of_scholarship_recieving",
-  "column_break_nbnz",
-  "tuition_fees",
-  "hostel_fees",
-  "nutrition_support_fees",
-  "others",
+  "no_of_months_approved",
+  "column_break_prwz",
   "scholarship_amount",
   "scholarship_duration",
-  "purpose_of_scholarship",
+  "total_amount_of_scholarship_recieving",
+  "total_approved_per_month",
+  "total_approved_for_the_year",
   "banking_details_section",
   "name_of_the_account_holder",
   "account_number",
@@ -34,6 +48,7 @@
  ],
  "fields": [
   {
+   "fetch_from": "student_education.school_id",
    "fieldname": "institute_id",
    "fieldtype": "Link",
    "label": "Institute ID",
@@ -44,17 +59,18 @@
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": "student_education.student_id",
    "fieldname": "student_id",
    "fieldtype": "Link",
    "label": "Student ID",
-   "options": "Student Profile"
+   "options": "Student Profile",
+   "search_index": 1
   },
   {
    "fetch_from": "student_id.student_name",
    "fieldname": "student_name",
    "fieldtype": "Data",
-   "label": "Student Name",
-   "options": "Student Profile"
+   "label": "Student Name"
   },
   {
    "fieldname": "type_of_student",
@@ -63,24 +79,27 @@
    "options": "Type of Student"
   },
   {
+   "fetch_from": "student_education.amount_requested_from_st",
    "fieldname": "tuition_fees",
-   "fieldtype": "Int",
-   "label": "Tuition Fees"
+   "fieldtype": "Currency",
+   "label": "Tuition Fees Requested"
   },
   {
+   "fetch_from": "student_education.hostel_requested_by_st",
    "fieldname": "hostel_fees",
-   "fieldtype": "Int",
-   "label": "Hostel Fees"
+   "fieldtype": "Currency",
+   "label": "Hostel Fees Requested"
   },
   {
+   "fetch_from": "student_education.nutrition_amount_requested_from_st",
    "fieldname": "nutrition_support_fees",
-   "fieldtype": "Int",
-   "label": "Nutrition Support Fees"
+   "fieldtype": "Currency",
+   "label": "Nutrition Support Fees Requested"
   },
   {
    "fieldname": "others",
-   "fieldtype": "Int",
-   "label": "Others"
+   "fieldtype": "Currency",
+   "label": "Other Sponsorship Requested"
   },
   {
    "fieldname": "scholarship_amount",
@@ -99,7 +118,7 @@
   },
   {
    "fieldname": "scholarship_duration",
-   "fieldtype": "Int",
+   "fieldtype": "Data",
    "label": "Scholarship Duration"
   },
   {
@@ -162,14 +181,84 @@
   {
    "default": "0",
    "fieldname": "total_amount_of_scholarship_recieving",
-   "fieldtype": "Data",
+   "fieldtype": "Currency",
    "label": "Total Amount of Scholarship Recieving",
    "read_only": 1
+  },
+  {
+   "fieldname": "student_details_section",
+   "fieldtype": "Section Break",
+   "label": "Student Details"
+  },
+  {
+   "fieldname": "student_education",
+   "fieldtype": "Link",
+   "label": "Student Education ID",
+   "options": "Student Educational Detail"
+  },
+  {
+   "fetch_from": "student_education.current_year_class",
+   "fieldname": "current_class",
+   "fieldtype": "Data",
+   "label": "Current Class(with Division)"
+  },
+  {
+   "fieldname": "section_break_caef",
+   "fieldtype": "Section Break",
+   "label": "Scholarship Request Details"
+  },
+  {
+   "fieldname": "tuition_fees_approved",
+   "fieldtype": "Currency",
+   "label": "Tuition Fees Approved"
+  },
+  {
+   "fieldname": "nutrition_support_fees_approved",
+   "fieldtype": "Currency",
+   "label": "Nutrition Support Fees Approved"
+  },
+  {
+   "fieldname": "column_break_hysa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hostel_fees_approved",
+   "fieldtype": "Currency",
+   "label": "Hostel Fees Approved"
+  },
+  {
+   "fieldname": "other_sponsorship_approved",
+   "fieldtype": "Currency",
+   "label": "Other Sponsorship Approved"
+  },
+  {
+   "fieldname": "section_break_zhxl",
+   "fieldtype": "Section Break",
+   "label": "Scholarship Approved Details"
+  },
+  {
+   "fieldname": "no_of_months_approved",
+   "fieldtype": "Int",
+   "label": "No. of Months Approved"
+  },
+  {
+   "fieldname": "column_break_prwz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_approved_per_month",
+   "fieldtype": "Currency",
+   "label": "Total Approved Per Month"
+  },
+  {
+   "fieldname": "total_approved_for_the_year",
+   "fieldtype": "Currency",
+   "label": "Total Approved for the Year"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-11 16:12:17.055476",
+ "modified": "2024-10-29 12:43:30.981099",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Scholarship Details",

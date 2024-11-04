@@ -82,7 +82,7 @@
   },
   {
    "fieldname": "year_of_establishment",
-   "fieldtype": "Date",
+   "fieldtype": "Int",
    "label": "Year of Establishment"
   },
   {
@@ -112,7 +112,7 @@
   },
   {
    "fieldname": "year_of_partnership_with_sunbird",
-   "fieldtype": "Date",
+   "fieldtype": "Int",
    "in_list_view": 1,
    "label": "Year of Partnership with Sunbird"
   },
@@ -225,7 +225,7 @@
    "link_fieldname": "school_id"
   }
  ],
- "modified": "2024-10-21 17:33:13.063082",
+ "modified": "2024-10-29 13:16:47.399542",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Institute Profile",

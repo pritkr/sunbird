@@ -30,6 +30,7 @@
   "purpose_of_scholarship",
   "sponsorship_to_be_paid_to",
   "no_of_months_approved",
+  "current_scholarship_year",
   "column_break_prwz",
   "scholarship_amount",
   "scholarship_duration",
@@ -51,6 +52,8 @@
    "fetch_from": "student_education.school_id",
    "fieldname": "institute_id",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Institute ID",
    "options": "Institute Profile"
   },
@@ -79,24 +82,29 @@
    "options": "Type of Student"
   },
   {
+   "depends_on": "eval: doc.tuition_fees > 0",
    "fetch_from": "student_education.amount_requested_from_st",
    "fieldname": "tuition_fees",
    "fieldtype": "Currency",
    "label": "Tuition Fees Requested"
   },
   {
+   "depends_on": "eval: doc.hostel_fees > 0",
    "fetch_from": "student_education.hostel_requested_by_st",
    "fieldname": "hostel_fees",
    "fieldtype": "Currency",
    "label": "Hostel Fees Requested"
   },
   {
+   "depends_on": "eval: doc.nutrition_support_fees > 0",
    "fetch_from": "student_education.nutrition_amount_requested_from_st",
    "fieldname": "nutrition_support_fees",
    "fieldtype": "Currency",
    "label": "Nutrition Support Fees Requested"
   },
   {
+   "depends_on": "eval: doc.others > 0",
+   "fetch_from": "student_education.others_amount_requested_from_st",
    "fieldname": "others",
    "fieldtype": "Currency",
    "label": "Other Sponsorship Requested"
@@ -104,6 +112,7 @@
   {
    "fieldname": "scholarship_amount",
    "fieldtype": "Currency",
+   "in_list_view": 1,
    "label": "Scholarship Amount"
   },
   {
@@ -208,11 +217,13 @@
    "label": "Scholarship Request Details"
   },
   {
+   "depends_on": "eval: doc.tuition_fees > 0",
    "fieldname": "tuition_fees_approved",
    "fieldtype": "Currency",
    "label": "Tuition Fees Approved"
   },
   {
+   "depends_on": "eval: doc.nutrition_support_fees > 0",
    "fieldname": "nutrition_support_fees_approved",
    "fieldtype": "Currency",
    "label": "Nutrition Support Fees Approved"
@@ -222,11 +233,13 @@
    "fieldtype": "Column Break"
   },
   {
+   "depends_on": "eval: doc.tuition_fees > 0",
    "fieldname": "hostel_fees_approved",
    "fieldtype": "Currency",
    "label": "Hostel Fees Approved"
   },
   {
+   "depends_on": "eval: doc.others > 0",
    "fieldname": "other_sponsorship_approved",
    "fieldtype": "Currency",
    "label": "Other Sponsorship Approved"
@@ -254,11 +267,19 @@
    "fieldname": "total_approved_for_the_year",
    "fieldtype": "Currency",
    "label": "Total Approved for the Year"
+  },
+  {
+   "fieldname": "current_scholarship_year",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Current Scholarship Year",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-29 12:43:30.981099",
+ "modified": "2024-10-29 16:17:36.243741",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Scholarship Details",

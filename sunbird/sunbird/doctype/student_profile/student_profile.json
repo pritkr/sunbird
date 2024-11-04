@@ -14,7 +14,6 @@
   "mother_tongue",
   "physical_disability",
   "what_kind_of_disability",
-  "type_of_sponsorship",
   "column_break_ugof",
   "tribe",
   "religion",
@@ -26,6 +25,7 @@
   "fathers_details",
   "fathers_name",
   "fathers_date_of_birth",
+  "father_age",
   "fathers_mother_tongue",
   "fathers_physical_disability",
   "fathers_what_kind_of_disability",
@@ -39,6 +39,7 @@
   "mothers_details",
   "mothers_name",
   "mothers_date_of_birth",
+  "mother_age",
   "mothers_mother_tongue",
   "mothers_physical_disability",
   "mothers_what_kind_of_disability",
@@ -52,6 +53,7 @@
   "guardian_details_section",
   "guardian_name",
   "date_of_birth__copy",
+  "gaurdian_age",
   "relationship_with_student",
   "column_break_ptrp",
   "guardian_occupation",
@@ -505,10 +507,19 @@
    "options": "Parent\nGuardian"
   },
   {
-   "fieldname": "type_of_sponsorship",
-   "fieldtype": "Link",
-   "label": "Type of Sponsorship",
-   "options": "Type of Sponsorship"
+   "fieldname": "father_age",
+   "fieldtype": "Int",
+   "label": "Age"
+  },
+  {
+   "fieldname": "mother_age",
+   "fieldtype": "Int",
+   "label": "Age"
+  },
+  {
+   "fieldname": "gaurdian_age",
+   "fieldtype": "Int",
+   "label": "Age"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -522,7 +533,7 @@
    "link_fieldname": "student_id"
   }
  ],
- "modified": "2024-10-29 11:36:07.707676",
+ "modified": "2024-10-29 12:58:41.744390",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Student Profile",

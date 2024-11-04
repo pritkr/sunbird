@@ -7,11 +7,12 @@
  "engine": "InnoDB",
  "field_order": [
   "student_id",
-  "school_id",
   "student_name",
+  "school_id",
   "school_address",
   "school_contact_name",
   "currently_active",
+  "year",
   "column_break_rjda",
   "school_contact_email",
   "school_contact_number",
@@ -22,9 +23,9 @@
   "overall_percent_in_previous_year",
   "date_of_student_added",
   "top_three_subject_scores",
-  "table_jgtr",
+  "subject_details",
   "extra_curricular_interest_section",
-  "name_of_the_sports",
+  "different_sports",
   "arts",
   "column_break_pqup",
   "music",
@@ -38,11 +39,12 @@
   "hostel_requested_by_st",
   "nutrition_amount_requested_from_st",
   "column_break_gbky",
-  "others_amount_requested_from_st"
+  "others_amount_requested_from_st",
+  "type_of_sponsorship"
  ],
  "fields": [
   {
-   "fetch_from": "school_name.address",
+   "fetch_from": "school_id.address",
    "fieldname": "school_address",
    "fieldtype": "Small Text",
    "label": "School Address"
@@ -104,19 +106,9 @@
    "label": "Top 3 Subject scores"
   },
   {
-   "fieldname": "table_jgtr",
-   "fieldtype": "Table",
-   "options": "Subject Scores"
-  },
-  {
    "fieldname": "extra_curricular_interest_section",
    "fieldtype": "Section Break",
    "label": "Extra Curricular Interest"
-  },
-  {
-   "fieldname": "name_of_the_sports",
-   "fieldtype": "Data",
-   "label": "Name of the Sports"
   },
   {
    "fieldname": "column_break_pqup",
@@ -126,7 +118,7 @@
    "fieldname": "music",
    "fieldtype": "Select",
    "label": "Music ",
-   "options": "Instrument\nSinging\nBoth"
+   "options": "N/A\nInstrument\nSinging\nBoth"
   },
   {
    "fieldname": "arts",
@@ -159,7 +151,7 @@
   {
    "fieldname": "school_tuition_fees",
    "fieldtype": "Currency",
-   "label": "School Tuition Fees"
+   "label": "Tuition Fees"
   },
   {
    "fieldname": "column_break_gbky",
@@ -219,6 +211,29 @@
    "fieldname": "date_of_student_added",
    "fieldtype": "Date",
    "label": "Date of Student Added"
+  },
+  {
+   "fieldname": "type_of_sponsorship",
+   "fieldtype": "Link",
+   "label": "Type of Sponsorship",
+   "options": "Type of Sponsorship"
+  },
+  {
+   "fieldname": "year",
+   "fieldtype": "Int",
+   "label": "Year",
+   "read_only": 1
+  },
+  {
+   "fieldname": "subject_details",
+   "fieldtype": "Table",
+   "label": "Subject Scores",
+   "options": "Subject Scores"
+  },
+  {
+   "fieldname": "different_sports",
+   "fieldtype": "Data",
+   "label": "Different sports played"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -228,7 +243,7 @@
    "link_fieldname": "student_education"
   }
  ],
- "modified": "2024-10-29 11:49:51.369068",
+ "modified": "2024-10-29 15:46:24.464971",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Student Educational Detail",

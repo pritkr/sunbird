@@ -1,8 +1,39 @@
-// Copyright (c) 2024, T4GC and contributors
-// For license information, please see license.txt
+function validate_year(year, field_label) {
+    //console.log("Utils loaded")
+    let currentYear = new Date().getFullYear();
 
-// frappe.ui.form.on("Institute Profile", {
-// 	refresh(frm) {
+    if (!/^\d{4}$/.test(year)) {
+        frappe.msgprint(__(field_label + ' must be a four-digit year.'));
+        return false;
+    } else if (year < 1800 || year > currentYear) {
+        frappe.msgprint(__(field_label + ' should be between 1800 and ' + currentYear + '.'));
+        return false;
+    }
+    return true;
+}
 
-// 	},
-// });
+frappe.ui.form.on('Institute Profile', {
+    year_of_establishment: function(frm) {
+        let year = frm.doc.year_of_establishment;
+        if (year && !validate_year(year, 'Year of Establishment')) {
+            frm.set_value('year_of_establishment', '');
+        }
+    },
+    year_of_partnership_with_sunbird: function(frm) {
+        let year_of_partnership = frm.doc.year_of_partnership_with_sunbird;
+        let year_of_establishment = frm.doc.year_of_establishment;
+
+        // Check if year_of_partnership is valid and not before year_of_establishment
+        if (year_of_partnership) {
+            // Validate the year first
+            if (!validate_year(year_of_partnership, 'Year of Partnership with Sunbird')) {
+                frm.set_value('year_of_partnership_with_sunbird', '');
+            } 
+            // Now check if it is not before year_of_establishment
+            else if (year_of_partnership < year_of_establishment) {
+                frappe.msgprint(__('Year of Partnership should not be before Year of Establishment.'));
+                frm.set_value('year_of_partnership_with_sunbird', ''); // Clear the field if validation fails
+            }
+        }
+    }
+});

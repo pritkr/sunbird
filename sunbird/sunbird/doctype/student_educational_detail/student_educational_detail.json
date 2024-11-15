@@ -13,6 +13,7 @@
   "school_contact_name",
   "currently_active",
   "year",
+  "test",
   "column_break_rjda",
   "school_contact_email",
   "school_contact_number",
@@ -40,7 +41,9 @@
   "nutrition_amount_requested_from_st",
   "column_break_gbky",
   "others_amount_requested_from_st",
-  "type_of_sponsorship"
+  "type_of_sponsorship",
+  "scholarship_details_section",
+  "scholarship_history"
  ],
  "fields": [
   {
@@ -234,6 +237,22 @@
    "fieldname": "different_sports",
    "fieldtype": "Data",
    "label": "Different sports played"
+  },
+  {
+   "fieldname": "scholarship_details_section",
+   "fieldtype": "Section Break",
+   "label": "Scholarship Details"
+  },
+  {
+   "fieldname": "test",
+   "fieldtype": "Data",
+   "label": "test"
+  },
+  {
+   "fieldname": "scholarship_history",
+   "fieldtype": "Table",
+   "label": "Scholarship History",
+   "options": "Scholarship Details Child"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -243,7 +262,7 @@
    "link_fieldname": "student_education"
   }
  ],
- "modified": "2024-10-29 15:46:24.464971",
+ "modified": "2024-11-15 13:19:36.762793",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Student Educational Detail",

@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{student_name}-{MM}-{YYYY}",
+ "autoname": "format:{student_name}-{student_education}",
  "creation": "2024-10-03 16:40:04.566204",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -9,11 +9,13 @@
   "student_details_section",
   "student_education",
   "institute_id",
+  "institute_name",
   "student_id",
   "student_name",
   "column_break_nbnz",
   "type_of_student",
   "current_class",
+  "scholarship_status",
   "section_break_caef",
   "tuition_fees",
   "tuition_fees_approved",
@@ -203,7 +205,8 @@
    "fieldname": "student_education",
    "fieldtype": "Link",
    "label": "Student Education ID",
-   "options": "Student Educational Detail"
+   "options": "Student Educational Detail",
+   "search_index": 1
   },
   {
    "fetch_from": "student_education.current_year_class",
@@ -275,11 +278,24 @@
    "in_standard_filter": 1,
    "label": "Current Scholarship Year",
    "read_only": 1
+  },
+  {
+   "fetch_from": "institute_id.institute_name",
+   "fieldname": "institute_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Institute Name"
+  },
+  {
+   "fieldname": "scholarship_status",
+   "fieldtype": "Select",
+   "label": "Scholarship Status",
+   "options": "\nActive\nTenure Completed\nCancelled"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-29 16:17:36.243741",
+ "modified": "2024-11-07 16:33:08.522582",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Scholarship Details",

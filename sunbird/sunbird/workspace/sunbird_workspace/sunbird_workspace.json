@@ -1,16 +1,15 @@
 {
- "app": "Sunbird",
  "charts": [
   {
-   "chart_name": "Students Sponsorship",
-   "label": "Students Sponsorship"
+   "chart_name": "Student Sponsorship",
+   "label": "Student Sponsorship"
   },
   {
    "chart_name": "Total Scholorship Value",
    "label": "Total Scholorship Value"
   }
  ],
- "content": "[{\"id\":\"pV61VP9iFs\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Sunbird Workspace</span>\",\"col\":12}},{\"id\":\"0MtIILWc2M\",\"type\":\"card\",\"data\":{\"card_name\":\"Institution Details\",\"col\":4}},{\"id\":\"5xkKhswayz\",\"type\":\"card\",\"data\":{\"card_name\":\"Student Details\",\"col\":4}},{\"id\":\"K6RGrqJKxd\",\"type\":\"card\",\"data\":{\"card_name\":\"Scholarship Details\",\"col\":4}},{\"id\":\"W3NPlaldZA\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Data Analysis</b></span>\",\"col\":12}},{\"id\":\"CGkg3N9h-k\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sunbird Data Analytics\",\"col\":5}},{\"id\":\"RgwfCtK-W-\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Students Sponsorship\",\"col\":12}},{\"id\":\"k9NSF0fJin\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Total Scholorship Value\",\"col\":12}}]",
+ "content": "[{\"id\":\"pV61VP9iFs\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Sunbird Workspace</span>\",\"col\":12}},{\"id\":\"0MtIILWc2M\",\"type\":\"card\",\"data\":{\"card_name\":\"Institution Details\",\"col\":4}},{\"id\":\"5xkKhswayz\",\"type\":\"card\",\"data\":{\"card_name\":\"Student Details\",\"col\":4}},{\"id\":\"K6RGrqJKxd\",\"type\":\"card\",\"data\":{\"card_name\":\"Scholarship Details\",\"col\":4}},{\"id\":\"W3NPlaldZA\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Data Analysis</b></span>\",\"col\":12}},{\"id\":\"CGkg3N9h-k\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sunbird Data Analytics\",\"col\":5}},{\"id\":\"97qD61Tx4C\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Student Sponsorship\",\"col\":12}},{\"id\":\"k9NSF0fJin\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Total Scholorship Value\",\"col\":12}}]",
  "creation": "2024-10-14 11:41:51.484920",
  "custom_blocks": [],
  "docstatus": 0,
@@ -121,7 +120,7 @@
    "type": "Link"
   }
  ],
- "modified": "2024-10-21 13:54:46.031121",
+ "modified": "2024-11-07 14:17:26.384991",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Sunbird Workspace",

@@ -138,23 +138,22 @@ app_license = "mit"
 # Hook on document methods and events
 
 # doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
+# 	"Scholarship Details": {
+# 		"on_update": "sunbird.sunbird.doctype.scholarship_details.scholarship_details.check_scholarship_status"
 # 	}
 # }
+
 
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
 # 	"all": [
 # 		"sunbird.tasks.all"
 # 	],
-# 	"daily": [
-# 		"sunbird.tasks.daily"
-# 	],
+	"daily": [
+		"sunbird.sunbird.doctype.scholarship_details.scholarship_details.check_scholarship_status"
+	],
 # 	"hourly": [
 # 		"sunbird.tasks.hourly"
 # 	],
@@ -164,7 +163,7 @@ app_license = "mit"
 # 	"monthly": [
 # 		"sunbird.tasks.monthly"
 # 	],
-# }
+}
 
 # Testing
 # -------

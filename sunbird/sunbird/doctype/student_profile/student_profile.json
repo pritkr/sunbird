@@ -342,10 +342,8 @@
    "label": "Occupation  "
   },
   {
-   "default": "Relative",
    "fieldname": "relationship_with_student",
    "fieldtype": "Select",
-   "in_list_view": 1,
    "label": "Relationship with student ",
    "options": "Relative\nBrother\nSister\nCousin"
   },
@@ -533,7 +531,7 @@
    "link_fieldname": "student_id"
   }
  ],
- "modified": "2024-10-29 12:58:41.744390",
+ "modified": "2024-11-07 14:26:03.212191",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Student Profile",

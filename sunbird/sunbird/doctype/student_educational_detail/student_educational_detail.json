@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format: {student_name}-{YYYY}",
+ "autoname": "format: {student_name}-{YYYY}-{####}",
  "creation": "2024-10-03 09:07:12.348779",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -11,7 +11,6 @@
   "school_id",
   "school_address",
   "school_contact_name",
-  "currently_active",
   "year",
   "column_break_rjda",
   "school_contact_email",
@@ -193,12 +192,6 @@
    "label": "Student Name"
   },
   {
-   "default": "0",
-   "fieldname": "currently_active",
-   "fieldtype": "Check",
-   "label": "Currently active"
-  },
-  {
    "fieldname": "school_id",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -243,7 +236,7 @@
    "link_fieldname": "student_education"
   }
  ],
- "modified": "2024-10-29 15:46:24.464971",
+ "modified": "2024-11-07 15:44:11.317888",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Student Educational Detail",

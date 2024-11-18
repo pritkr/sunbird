@@ -35,7 +35,7 @@
    "width": "Half"
   },
   {
-   "chart": "Students Sponsorship",
+   "chart": "Student Sponsorship",
    "width": "Half"
   },
   {
@@ -54,7 +54,7 @@
  "idx": 3,
  "is_default": 0,
  "is_standard": 1,
- "modified": "2024-10-14 12:08:55.059684",
+ "modified": "2024-11-07 12:35:20.047183",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Sunbird Data Analytics",

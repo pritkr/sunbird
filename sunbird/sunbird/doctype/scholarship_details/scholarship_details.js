@@ -1,6 +1,7 @@
 // Copyright (c) 2024, T4GC and contributors
 // For license information, please see license.txt
 
+
 frappe.ui.form.on("Scholarship Details", {
     scholarship_start_date: function(frm) {
         var scholarship_start_date = frm.doc.scholarship_start_date;
@@ -51,6 +52,19 @@ frappe.ui.form.on("Scholarship Details", {
         if (scholarship_start_date && scholarship_end_date) {
             calculate_tenure(frm, scholarship_start_date, scholarship_end_date);
         }
+    },
+    after_save: function(frm) {
+        frappe.call({
+            method: "sunbird.sunbird.doctype.scholarship_details.custom.update_student_educational_details",  // Replace with actual path
+            args: {
+                scholarship_details: frm.doc
+            },
+            callback: function(response) {
+                if (response.message) {
+                    frappe.msgprint(__('Student educational details updated successfully.'));
+                }
+            }
+        });
     }
 });
 

@@ -1,0 +1,50 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-13 21:00:24.390653",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "scholarship_start_date",
+  "scholarship_end_date",
+  "column_break_kdrz",
+  "total_amount_of_scholarship"
+ ],
+ "fields": [
+  {
+   "fieldname": "scholarship_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Scholarship Start Date"
+  },
+  {
+   "fieldname": "column_break_kdrz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount_of_scholarship",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Amount of Scholarship"
+  },
+  {
+   "fieldname": "scholarship_end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Scholarship End Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-15 13:46:04.940311",
+ "modified_by": "Administrator",
+ "module": "Sunbird",
+ "name": "Scholarship Details Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -254,7 +254,7 @@
    "link_fieldname": "student_education"
   }
  ],
- "modified": "2024-11-22 15:36:38.878285",
+ "modified": "2024-11-22 16:45:18.597819",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Student Educational Detail",
@@ -277,5 +277,6 @@
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],
- "title_field": "student_name"
+ "title_field": "student_name",
+ "track_changes": 1
 }

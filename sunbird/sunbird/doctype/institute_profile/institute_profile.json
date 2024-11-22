@@ -225,7 +225,7 @@
    "link_fieldname": "school_id"
   }
  ],
- "modified": "2024-10-29 13:16:47.399542",
+ "modified": "2024-11-22 16:44:50.336942",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Institute Profile",
@@ -274,5 +274,6 @@
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],
- "title_field": "institute_name"
+ "title_field": "institute_name",
+ "track_changes": 1
 }

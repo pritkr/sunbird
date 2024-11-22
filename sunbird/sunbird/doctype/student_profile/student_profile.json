@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:STUD-{YYYY}-{##}",
+ "autoname": "format:{state_code}-{YYYY}-{##}",
  "creation": "2024-10-02 23:51:45.174599",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -20,6 +20,7 @@
   "village",
   "district",
   "state",
+  "state_code",
   "photo",
   "custodial_status",
   "fathers_details",
@@ -86,7 +87,9 @@
   "father_aadhaar_photo",
   "mother_aadhaar_photo",
   "sibling_education_details_section",
-  "table_myuz"
+  "table_myuz",
+  "scholarship_history_section",
+  "scholarship_history"
  ],
  "fields": [
   {
@@ -518,6 +521,24 @@
    "fieldname": "gaurdian_age",
    "fieldtype": "Int",
    "label": "Age"
+  },
+  {
+   "fieldname": "scholarship_history_section",
+   "fieldtype": "Section Break",
+   "label": "Scholarship History"
+  },
+  {
+   "fieldname": "scholarship_history",
+   "fieldtype": "Table",
+   "label": "Scholarship History",
+   "options": "Scholarship Details Child"
+  },
+  {
+   "fetch_from": "state.state_code",
+   "fieldname": "state_code",
+   "fieldtype": "Data",
+   "label": "State Code",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -531,7 +552,7 @@
    "link_fieldname": "student_id"
   }
  ],
- "modified": "2024-11-07 14:26:03.212191",
+ "modified": "2024-11-22 15:44:40.107681",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Student Profile",

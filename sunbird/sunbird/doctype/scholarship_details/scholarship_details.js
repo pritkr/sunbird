@@ -55,7 +55,7 @@ frappe.ui.form.on("Scholarship Details", {
     },
     after_save: function(frm) {
         frappe.call({
-            method: "sunbird.sunbird.doctype.scholarship_details.custom.update_student_educational_details",  // Replace with actual path
+            method: "sunbird.sunbird.doctype.scholarship_details.custom.update_student_profile",  
             args: {
                 scholarship_details: frm.doc
             },

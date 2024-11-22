@@ -49,25 +49,25 @@
    "fetch_from": "school_id.address",
    "fieldname": "school_address",
    "fieldtype": "Small Text",
-   "label": "School Address"
+   "label": "Institute Address"
   },
   {
    "fetch_from": "school_id.institute_poc",
    "fieldname": "school_contact_name",
    "fieldtype": "Data",
-   "label": "School Contact Name"
+   "label": "Institute Contact Name"
   },
   {
    "fetch_from": "school_id.phone_number",
    "fieldname": "school_contact_number",
    "fieldtype": "Phone",
-   "label": "School Contact Number"
+   "label": "Institute Contact Number"
   },
   {
    "fetch_from": "school_id.email_id",
    "fieldname": "school_contact_email",
    "fieldtype": "Data",
-   "label": "School Contact Email",
+   "label": "Institute Contact Email",
    "options": "Email"
   },
   {
@@ -199,8 +199,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "School ID",
-   "link_filters": "[[\"Institute Profile\",\"type_of_institution\",\"=\",\"School\"]]",
+   "label": "Institute ID",
    "options": "Institute Profile"
   },
   {
@@ -255,7 +254,7 @@
    "link_fieldname": "student_education"
   }
  ],
- "modified": "2024-11-15 13:19:36.762793",
+ "modified": "2024-11-22 15:36:38.878285",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Student Educational Detail",

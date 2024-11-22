@@ -6,7 +6,8 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "state"
+  "state",
+  "state_code"
  ],
  "fields": [
   {
@@ -14,11 +15,18 @@
    "fieldtype": "Data",
    "label": "State",
    "unique": 1
+  },
+  {
+   "fieldname": "state_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "State Code",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-14 13:10:00.212756",
+ "modified": "2024-11-22 15:41:59.238758",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "State",

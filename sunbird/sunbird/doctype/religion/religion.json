@@ -18,7 +18,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-14 13:07:46.829826",
+ "modified": "2024-11-26 16:37:03.975088",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Religion",
@@ -38,12 +38,24 @@
    "write": 1
   },
   {
+   "create": 1,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "Institute POC",
+   "select": 1,
+   "share": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sunbird Staff Member",
    "select": 1,
    "share": 1
   }

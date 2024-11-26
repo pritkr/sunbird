@@ -18,7 +18,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-14 13:03:46.227264",
+ "modified": "2024-11-26 16:42:12.175300",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Type of Sponsorship",
@@ -46,6 +46,18 @@
    "role": "Institute POC",
    "select": 1,
    "share": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sunbird Staff Member",
+   "select": 1,
+   "share": 1,
+   "write": 1
   }
  ],
  "sort_field": "creation",

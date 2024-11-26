@@ -225,7 +225,7 @@
    "link_fieldname": "school_id"
   }
  ],
- "modified": "2024-11-22 16:44:50.336942",
+ "modified": "2024-11-26 16:28:03.215403",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Institute Profile",
@@ -246,10 +246,8 @@
   },
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
-   "if_owner": 1,
    "print": 1,
    "read": 1,
    "report": 1,
@@ -258,16 +256,13 @@
    "write": 1
   },
   {
-   "create": 1,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "Institute POC",
-   "select": 1,
-   "share": 1,
-   "write": 1
+   "share": 1
   }
  ],
  "show_title_field_in_link": 1,

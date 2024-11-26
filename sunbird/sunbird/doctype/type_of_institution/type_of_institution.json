@@ -18,7 +18,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-09 17:15:03.758190",
+ "modified": "2024-11-26 16:29:00.324528",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Type of Institution",
@@ -36,6 +36,26 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sunbird Staff Member",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Institute POC",
+   "share": 1
   }
  ],
  "sort_field": "creation",

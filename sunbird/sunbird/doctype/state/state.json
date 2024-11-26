@@ -26,7 +26,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-26 16:32:47.811242",
+ "modified": "2024-11-26 16:50:28.878877",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "State",
@@ -54,7 +54,8 @@
    "report": 1,
    "role": "Institute POC",
    "select": 1,
-   "share": 1
+   "share": 1,
+   "write": 1
   },
   {
    "create": 1,
@@ -64,7 +65,9 @@
    "read": 1,
    "report": 1,
    "role": "Sunbird Staff Member",
-   "share": 1
+   "select": 1,
+   "share": 1,
+   "write": 1
   }
  ],
  "sort_field": "creation",

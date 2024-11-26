@@ -43,7 +43,10 @@
   {
    "fieldname": "institute_name",
    "fieldtype": "Data",
-   "label": "Institute Name"
+   "in_global_search": 1,
+   "in_standard_filter": 1,
+   "label": "Institute Name",
+   "search_index": 1
   },
   {
    "fieldname": "column_break_nusx",
@@ -225,7 +228,7 @@
    "link_fieldname": "school_id"
   }
  ],
- "modified": "2024-11-26 16:28:03.215403",
+ "modified": "2024-11-26 17:07:58.772385",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Institute Profile",

@@ -1,4 +1,5 @@
 {
+ "app": "Sunbird",
  "charts": [
   {
    "chart_name": "Student Sponsorship",
@@ -9,7 +10,7 @@
    "label": "Total Scholorship Value"
   }
  ],
- "content": "[{\"id\":\"pV61VP9iFs\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Sunbird Workspace</span>\",\"col\":12}},{\"id\":\"0MtIILWc2M\",\"type\":\"card\",\"data\":{\"card_name\":\"Institution Details\",\"col\":4}},{\"id\":\"5xkKhswayz\",\"type\":\"card\",\"data\":{\"card_name\":\"Student Details\",\"col\":4}},{\"id\":\"K6RGrqJKxd\",\"type\":\"card\",\"data\":{\"card_name\":\"Scholarship Details\",\"col\":4}},{\"id\":\"W3NPlaldZA\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Data Analysis</b></span>\",\"col\":12}},{\"id\":\"CGkg3N9h-k\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sunbird Data Analytics\",\"col\":5}},{\"id\":\"97qD61Tx4C\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Student Sponsorship\",\"col\":12}},{\"id\":\"k9NSF0fJin\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Total Scholorship Value\",\"col\":12}}]",
+ "content": "[{\"id\":\"pV61VP9iFs\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Sunbird Workspace</span>\",\"col\":12}},{\"id\":\"0MtIILWc2M\",\"type\":\"card\",\"data\":{\"card_name\":\"Institution Details\",\"col\":4}},{\"id\":\"5xkKhswayz\",\"type\":\"card\",\"data\":{\"card_name\":\"Student Details\",\"col\":4}},{\"id\":\"K6RGrqJKxd\",\"type\":\"card\",\"data\":{\"card_name\":\"Scholarship Details\",\"col\":4}},{\"id\":\"W3NPlaldZA\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Data Analysis</b></span>\",\"col\":12}},{\"id\":\"CGkg3N9h-k\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sunbird Data Analytics\",\"col\":6}},{\"id\":\"AJWjF2QCIq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Scholarship History\",\"col\":6}},{\"id\":\"97qD61Tx4C\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Student Sponsorship\",\"col\":12}},{\"id\":\"k9NSF0fJin\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Total Scholorship Value\",\"col\":12}}]",
  "creation": "2024-10-14 11:41:51.484920",
  "custom_blocks": [],
  "docstatus": 0,
@@ -120,7 +121,7 @@
    "type": "Link"
   }
  ],
- "modified": "2024-11-07 14:17:26.384991",
+ "modified": "2024-11-27 15:14:23.063458",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Sunbird Workspace",
@@ -145,7 +146,15 @@
    "label": "Sunbird Data Analytics",
    "link_to": "Sunbird Data Analytics",
    "type": "Dashboard"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Scholarship History",
+   "link_to": "Scholarship History",
+   "type": "Report"
   }
  ],
- "title": "Sunbird Workspace"
+ "title": "Sunbird Workspace",
+ "type": "Workspace"
 }

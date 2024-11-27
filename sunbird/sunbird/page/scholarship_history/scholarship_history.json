@@ -4,13 +4,20 @@
  "docstatus": 0,
  "doctype": "Page",
  "idx": 0,
- "modified": "2024-10-29 16:19:47.907591",
+ "modified": "2024-11-27 16:12:03.465159",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "scholarship-history",
  "owner": "Administrator",
  "page_name": "scholarship-history",
- "roles": [],
+ "roles": [
+  {
+   "role": "Sunbird Staff Member"
+  },
+  {
+   "role": "Institute POC"
+  }
+ ],
  "script": null,
  "standard": "Yes",
  "style": null,

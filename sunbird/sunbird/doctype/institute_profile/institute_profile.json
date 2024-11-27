@@ -158,7 +158,7 @@
   },
   {
    "fieldname": "account_number",
-   "fieldtype": "Int",
+   "fieldtype": "Data",
    "label": "Account Number"
   },
   {
@@ -228,7 +228,7 @@
    "link_fieldname": "school_id"
   }
  ],
- "modified": "2024-11-26 17:07:58.772385",
+ "modified": "2024-11-27 16:29:44.172413",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Institute Profile",

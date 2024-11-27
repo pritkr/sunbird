@@ -10,7 +10,8 @@
   "scholarship_end_date",
   "column_break_kdrz",
   "total_amount_of_scholarship",
-  "class"
+  "class",
+  "scolarship_id"
  ],
  "fields": [
   {
@@ -40,12 +41,18 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Class"
+  },
+  {
+   "fieldname": "scolarship_id",
+   "fieldtype": "Link",
+   "label": "Scolarship ID",
+   "options": "Scholarship Details"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-11-22 14:22:21.262605",
+ "modified": "2024-11-27 16:17:50.394168",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Scholarship Details Child",

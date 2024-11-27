@@ -1,0 +1,211 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-25 19:12:23.381257",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "fathers_details_section",
+  "father_name",
+  "fathers_date_of_birth",
+  "father_age",
+  "father_mother_tongue",
+  "father_physical_disability",
+  "father_what_kind_of_disability",
+  "father_alive",
+  "column_break_rkwd",
+  "father_tribe",
+  "father_religion",
+  "father_village",
+  "father_education",
+  "occupation",
+  "mothers_details_section",
+  "mother_name",
+  "mother_date_of_birth",
+  "mother_age",
+  "mother_mother_tongue",
+  "mother_physical_disability",
+  "mother_what_kind_of_disability",
+  "mother_alive",
+  "column_break_ucao",
+  "mother_tribe",
+  "mother_religion",
+  "mother_village",
+  "mother_occupation",
+  "mother_education"
+ ],
+ "fields": [
+  {
+   "fieldname": "fathers_details_section",
+   "fieldtype": "Section Break",
+   "label": "Father's Details"
+  },
+  {
+   "fieldname": "column_break_rkwd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fathers_date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "father_age",
+   "fieldtype": "Int",
+   "label": "Age"
+  },
+  {
+   "fieldname": "father_mother_tongue",
+   "fieldtype": "Data",
+   "label": "Mother Tongue"
+  },
+  {
+   "fieldname": "father_education",
+   "fieldtype": "Data",
+   "label": "Education"
+  },
+  {
+   "fieldname": "father_religion",
+   "fieldtype": "Link",
+   "label": "Religion",
+   "options": "Religion"
+  },
+  {
+   "fieldname": "father_village",
+   "fieldtype": "Link",
+   "label": "Village",
+   "options": "Village"
+  },
+  {
+   "fieldname": "father_tribe",
+   "fieldtype": "Link",
+   "label": "Tribe",
+   "options": "Tribe"
+  },
+  {
+   "fieldname": "father_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "father_physical_disability",
+   "fieldtype": "Select",
+   "label": "Physical Disability",
+   "options": "No\nYes"
+  },
+  {
+   "fieldname": "occupation",
+   "fieldtype": "Data",
+   "label": "Occupation"
+  },
+  {
+   "depends_on": "eval:doc.father_physical_disability==\"Yes\"",
+   "fieldname": "father_what_kind_of_disability",
+   "fieldtype": "Data",
+   "label": "What kind of Disability?"
+  },
+  {
+   "fieldname": "father_alive",
+   "fieldtype": "Select",
+   "label": "Alive"
+  },
+  {
+   "fieldname": "mothers_details_section",
+   "fieldtype": "Section Break",
+   "label": "Mother's Details"
+  },
+  {
+   "fieldname": "mother_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "column_break_ucao",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mother_date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth "
+  },
+  {
+   "fieldname": "mother_age",
+   "fieldtype": "Int",
+   "label": "Age "
+  },
+  {
+   "fieldname": "mother_mother_tongue",
+   "fieldtype": "Data",
+   "label": "Mother Tongue "
+  },
+  {
+   "fieldname": "mother_physical_disability",
+   "fieldtype": "Select",
+   "label": "Physical Disability ",
+   "options": "No\nYes"
+  },
+  {
+   "depends_on": "eval:doc.father_physical_disability==\"Yes\"",
+   "fieldname": "mother_what_kind_of_disability",
+   "fieldtype": "Data",
+   "label": "What kind of Disability?"
+  },
+  {
+   "fieldname": "mother_alive",
+   "fieldtype": "Select",
+   "label": "Alive "
+  },
+  {
+   "fieldname": "mother_tribe",
+   "fieldtype": "Link",
+   "label": "Tribe",
+   "options": "Tribe"
+  },
+  {
+   "fieldname": "mother_religion",
+   "fieldtype": "Link",
+   "label": "Religion ",
+   "options": "Religion"
+  },
+  {
+   "fieldname": "mother_village",
+   "fieldtype": "Link",
+   "label": "Village ",
+   "options": "Village"
+  },
+  {
+   "fieldname": "mother_occupation",
+   "fieldtype": "Data",
+   "label": "Occupation "
+  },
+  {
+   "fieldname": "mother_education",
+   "fieldtype": "Data",
+   "label": "Education "
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-25 19:25:24.172033",
+ "modified_by": "Administrator",
+ "module": "Sunbird",
+ "name": "Family",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

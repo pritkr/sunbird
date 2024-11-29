@@ -40,9 +40,7 @@
   "nutrition_amount_requested_from_st",
   "column_break_gbky",
   "others_amount_requested_from_st",
-  "type_of_sponsorship",
-  "scholarship_details_section",
-  "scholarship_history"
+  "type_of_sponsorship"
  ],
  "fields": [
   {
@@ -231,20 +229,9 @@
    "label": "Different sports played"
   },
   {
-   "fieldname": "scholarship_details_section",
-   "fieldtype": "Section Break",
-   "label": "Scholarship Details"
-  },
-  {
    "fieldname": "test",
    "fieldtype": "Data",
    "label": "test"
-  },
-  {
-   "fieldname": "scholarship_history",
-   "fieldtype": "Table",
-   "label": "Scholarship History",
-   "options": "Scholarship Details Child"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -254,7 +241,7 @@
    "link_fieldname": "student_education"
   }
  ],
- "modified": "2024-11-26 16:38:56.043854",
+ "modified": "2024-11-29 16:05:32.774349",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Student Educational Detail",

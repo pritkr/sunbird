@@ -53,6 +53,15 @@ frappe.ui.form.on("Scholarship Details", {
             calculate_tenure(frm, scholarship_start_date, scholarship_end_date);
         }
     },
+    tuition_fees_approved: function(frm) {
+        calculate_total_scholarship(frm);
+    },
+    nutrition_support_fees_approved: function(frm) {
+        calculate_total_scholarship(frm);
+    },
+    hostel_fees_approved: function(frm) {
+        calculate_total_scholarship(frm);
+    },
     after_save: function(frm) {
         frappe.call({
             method: "sunbird.sunbird.doctype.scholarship_details.custom.update_student_profile",  
@@ -67,6 +76,15 @@ frappe.ui.form.on("Scholarship Details", {
         });
     }
 });
+
+function calculate_total_scholarship(frm) {
+    let tuition = frm.doc.tuition_fees_approved || 0;
+    let nutrition = frm.doc.nutrition_support_fees_approved || 0;
+    let hostel = frm.doc.hostel_fees_approved || 0;
+
+    let total = tuition + nutrition + hostel;
+    frm.set_value('total_amount_of_scholarship_recieving', total);
+}
 
 function calculate_tenure(frm, start_date, end_date) {
     // Parse the dates

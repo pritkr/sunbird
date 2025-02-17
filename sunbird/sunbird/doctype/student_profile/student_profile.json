@@ -22,6 +22,7 @@
   "state",
   "photo",
   "custodial_status",
+  "enter_the_custodial_status",
   "fathers_details",
   "fathers_name",
   "fathers_date_of_birth",
@@ -50,6 +51,20 @@
   "mothers_village",
   "mothers_education",
   "mothers_occupation",
+  "section_break_udva",
+  "parent_name",
+  "parents_dob",
+  "parents_age",
+  "parents_mother_tongue",
+  "parents_disability",
+  "parents_disability_data",
+  "alive",
+  "column_break_oxew",
+  "parents_tribe",
+  "parents_religion",
+  "parents_village",
+  "parents_education",
+  "parents_occupation",
   "guardian_details_section",
   "guardian_name",
   "date_of_birth__copy",
@@ -81,6 +96,8 @@
   "student_aadhaar_number",
   "father_aadhaar_number",
   "mother_aadhaar_number",
+  "parents_aadhar_no",
+  "guardian_aadhar_no",
   "column_break_tsnh",
   "student_aadhaar_photo",
   "father_aadhaar_photo",
@@ -359,9 +376,12 @@
    "label": "Contact Information of the Family"
   },
   {
+   "default": "+91-",
    "fieldname": "student_phone_number",
    "fieldtype": "Phone",
-   "label": "Student\u2019s Phone Number"
+   "in_list_view": 1,
+   "label": "Student\u2019s Phone Number",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_vfrv",
@@ -457,7 +477,8 @@
   {
    "fieldname": "student_aadhaar_number",
    "fieldtype": "Data",
-   "label": "Student's Aadhaar Number"
+   "label": "Student's Aadhaar Number",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_tsnh",
@@ -466,22 +487,30 @@
   {
    "fieldname": "student_aadhaar_photo",
    "fieldtype": "Attach Image",
-   "label": "Student's Aadhaar Photo"
+   "label": "Student's Aadhaar Photo",
+   "reqd": 1
   },
   {
+   "default": "nill",
+   "depends_on": "eval:doc.custodial_status == 'Parent';",
    "fieldname": "father_aadhaar_number",
    "fieldtype": "Data",
-   "label": "Father's Aadhaar Number "
+   "label": "Father's Aadhaar Number ",
+   "reqd": 1
   },
   {
+   "default": "nill",
+   "depends_on": "eval:doc.custodial_status == 'Parent';",
    "fieldname": "mother_aadhaar_number",
    "fieldtype": "Data",
-   "label": "Mother's Aadhaar Number "
+   "label": "Mother's Aadhaar Number ",
+   "reqd": 1
   },
   {
    "fieldname": "father_aadhaar_photo",
    "fieldtype": "Attach Image",
-   "label": "Father's Aadhaar Photo "
+   "label": "Father's Aadhaar Photo ",
+   "reqd": 1
   },
   {
    "fieldname": "mother_aadhaar_photo",
@@ -502,7 +531,7 @@
    "fieldname": "custodial_status",
    "fieldtype": "Select",
    "label": "Custodial Status",
-   "options": "Parent\nGuardian"
+   "options": "Parent\nGuardian\nSingle Parent\nOthers"
   },
   {
    "fieldname": "father_age",
@@ -518,6 +547,104 @@
    "fieldname": "gaurdian_age",
    "fieldtype": "Int",
    "label": "Age"
+  },
+  {
+   "depends_on": "eval:doc.custodial_status == \"Others\"",
+   "fieldname": "enter_the_custodial_status",
+   "fieldtype": "Date",
+   "label": "Enter the custodial status"
+  },
+  {
+   "depends_on": "eval:doc.custodial_status == 'Single Parent';",
+   "fieldname": "section_break_udva",
+   "fieldtype": "Section Break",
+   "label": "Parent Details"
+  },
+  {
+   "fieldname": "parent_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "parents_dob",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "parents_age",
+   "fieldtype": "Int",
+   "label": "Age"
+  },
+  {
+   "fieldname": "parents_mother_tongue",
+   "fieldtype": "Data",
+   "label": "Mother Tongue"
+  },
+  {
+   "fieldname": "parents_disability",
+   "fieldtype": "Select",
+   "label": "Physical Disability",
+   "options": "No\nYes"
+  },
+  {
+   "depends_on": "eval:doc.parents_disability==\"Yes\"",
+   "fieldname": "parents_disability_data",
+   "fieldtype": "Data",
+   "label": "What kind of disability?  "
+  },
+  {
+   "fieldname": "alive",
+   "fieldtype": "Select",
+   "label": "Alive?",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "parents_tribe",
+   "fieldtype": "Link",
+   "label": "Tribe",
+   "options": "Tribe"
+  },
+  {
+   "fieldname": "column_break_oxew",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "parents_religion",
+   "fieldtype": "Link",
+   "label": "Religion",
+   "options": "Religion"
+  },
+  {
+   "fieldname": "parents_village",
+   "fieldtype": "Link",
+   "label": "Village",
+   "options": "Village"
+  },
+  {
+   "fieldname": "parents_education",
+   "fieldtype": "Data",
+   "label": "Education"
+  },
+  {
+   "fieldname": "parents_occupation",
+   "fieldtype": "Data",
+   "label": "Occupation"
+  },
+  {
+   "default": "nill",
+   "depends_on": "doc.custodial_status == 'Single Parent';",
+   "fieldname": "parents_aadhar_no",
+   "fieldtype": "Data",
+   "label": "Parent's Aadhar Number",
+   "reqd": 1
+  },
+  {
+   "default": "Nill",
+   "depends_on": "doc.custodial_status == 'Guardian'\r\n",
+   "fieldname": "guardian_aadhar_no",
+   "fieldtype": "Data",
+   "label": "Guardians Aadhar Number",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -531,7 +658,7 @@
    "link_fieldname": "student_id"
   }
  ],
- "modified": "2024-11-07 14:26:03.212191",
+ "modified": "2025-02-18 02:01:08.728821",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Student Profile",

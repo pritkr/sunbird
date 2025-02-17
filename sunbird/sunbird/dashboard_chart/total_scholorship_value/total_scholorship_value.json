@@ -1,6 +1,6 @@
 {
  "based_on": "scholarship_start_date",
- "chart_name": "Total Scholorship Value",
+ "chart_name": "Total Scholarship Value",
  "chart_type": "Sum",
  "color": "#5c1b1b",
  "creation": "2024-10-14 12:02:20.997228",
@@ -17,7 +17,7 @@
  "modified": "2024-10-14 12:03:28.303421",
  "modified_by": "Administrator",
  "module": "Sunbird",
- "name": "Total Scholorship Value",
+ "name": "Total Scholarship Value",
  "number_of_groups": 0,
  "owner": "Administrator",
  "parent_document_type": "",

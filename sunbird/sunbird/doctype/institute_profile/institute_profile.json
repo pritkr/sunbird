@@ -12,6 +12,7 @@
   "purpose_of_establishment",
   "column_break_nusx",
   "address",
+  "pin_code",
   "village",
   "district",
   "state",
@@ -51,7 +52,7 @@
   },
   {
    "fieldname": "address",
-   "fieldtype": "Small Text",
+   "fieldtype": "Data",
    "label": "Address"
   },
   {
@@ -216,6 +217,11 @@
    "fieldtype": "Link",
    "label": "Institute User ID",
    "options": "User"
+  },
+  {
+   "fieldname": "pin_code",
+   "fieldtype": "Data",
+   "label": "Pin Code"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -223,9 +229,13 @@
   {
    "link_doctype": "Student Educational Detail",
    "link_fieldname": "school_id"
+  },
+  {
+   "link_doctype": "Institute POC",
+   "link_fieldname": "institute_id"
   }
  ],
- "modified": "2024-10-29 13:16:47.399542",
+ "modified": "2025-02-18 01:40:30.262172",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Institute Profile",

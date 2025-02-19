@@ -11,8 +11,10 @@
   "year_of_establishment",
   "purpose_of_establishment",
   "column_break_nusx",
-  "address",
+  "address_1",
+  "address_line_2",
   "pin_code",
+  "landmark",
   "village",
   "district",
   "state",
@@ -49,11 +51,6 @@
   {
    "fieldname": "column_break_nusx",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "address",
-   "fieldtype": "Data",
-   "label": "Address"
   },
   {
    "fieldname": "type_of_institution",
@@ -222,6 +219,21 @@
    "fieldname": "pin_code",
    "fieldtype": "Data",
    "label": "Pin Code"
+  },
+  {
+   "fieldname": "address_1",
+   "fieldtype": "Data",
+   "label": "Address line 1"
+  },
+  {
+   "fieldname": "address_line_2",
+   "fieldtype": "Data",
+   "label": "Address line 2"
+  },
+  {
+   "fieldname": "landmark",
+   "fieldtype": "Data",
+   "label": "Landmark"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -235,7 +247,7 @@
    "link_fieldname": "institute_id"
   }
  ],
- "modified": "2025-02-18 01:40:30.262172",
+ "modified": "2025-02-19 15:15:12.823571",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Institute Profile",

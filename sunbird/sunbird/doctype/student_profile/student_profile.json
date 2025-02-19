@@ -102,6 +102,8 @@
   "student_aadhaar_photo",
   "father_aadhaar_photo",
   "mother_aadhaar_photo",
+  "parents_aadhar_photo",
+  "guardians_aadhar_photo",
   "sibling_education_details_section",
   "table_myuz"
  ],
@@ -491,31 +493,30 @@
    "reqd": 1
   },
   {
-   "default": "nill",
    "depends_on": "eval:doc.custodial_status == 'Parent';",
    "fieldname": "father_aadhaar_number",
    "fieldtype": "Data",
-   "label": "Father's Aadhaar Number ",
-   "reqd": 1
+   "label": "Father's Aadhaar Number "
   },
   {
-   "default": "nill",
    "depends_on": "eval:doc.custodial_status == 'Parent';",
    "fieldname": "mother_aadhaar_number",
    "fieldtype": "Data",
-   "label": "Mother's Aadhaar Number ",
-   "reqd": 1
+   "label": "Mother's Aadhaar Number "
   },
   {
+   "depends_on": "eval:doc.custodial_status == 'Parent';",
    "fieldname": "father_aadhaar_photo",
    "fieldtype": "Attach Image",
    "label": "Father's Aadhaar Photo ",
-   "reqd": 1
+   "mandatory_depends_on": "reqd: \"eval: doc.custodial_status == 'Parent'\"\n"
   },
   {
+   "depends_on": "eval:doc.custodial_status == 'Parent';",
    "fieldname": "mother_aadhaar_photo",
    "fieldtype": "Attach Image",
-   "label": "Mother's Aadhaar Photo"
+   "label": "Mother's Aadhaar Photo",
+   "mandatory_depends_on": "reqd: \"eval: doc.custodial_status == 'Parent\"\n"
   },
   {
    "fieldname": "sibling_education_details_section",
@@ -631,20 +632,30 @@
    "label": "Occupation"
   },
   {
-   "default": "nill",
    "depends_on": "doc.custodial_status == 'Single Parent';",
    "fieldname": "parents_aadhar_no",
    "fieldtype": "Data",
-   "label": "Parent's Aadhar Number",
-   "reqd": 1
+   "label": "Parent's Aadhar Number"
   },
   {
-   "default": "Nill",
-   "depends_on": "doc.custodial_status == 'Guardian'\r\n",
+   "depends_on": "eval: doc.custodial_status == 'Guardian'",
    "fieldname": "guardian_aadhar_no",
    "fieldtype": "Data",
-   "label": "Guardians Aadhar Number",
-   "reqd": 1
+   "label": "Guardians Aadhar Number"
+  },
+  {
+   "depends_on": "doc.custodial_status == 'Single Parent';",
+   "fieldname": "parents_aadhar_photo",
+   "fieldtype": "Attach",
+   "label": "Parent's Aadhar Photo",
+   "mandatory_depends_on": "reqd: \"eval: doc.custodial_status == 'Single Parent'\"\n"
+  },
+  {
+   "depends_on": "doc.custodial_status == 'Guardian'\r\n",
+   "fieldname": "guardians_aadhar_photo",
+   "fieldtype": "Attach",
+   "label": "Guardian's Aadhar Photo",
+   "mandatory_depends_on": "reqd: \"eval: doc.custodial_status == 'Guardian'\"\n"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -658,7 +669,7 @@
    "link_fieldname": "student_id"
   }
  ],
- "modified": "2025-02-18 02:01:08.728821",
+ "modified": "2025-02-19 15:27:38.702720",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Student Profile",

@@ -22,13 +22,9 @@
   "overall_percent_in_previous_year",
   "date_of_student_added",
   "state",
-  "top_three_subject_scores",
-  "subject_details",
   "extra_curricular_interest_section",
   "different_sports",
-  "arts",
   "column_break_pqup",
-  "music",
   "dreams_and_aspirations_section",
   "dream_job",
   "column_break_dtnt",
@@ -36,11 +32,15 @@
   "sponsorship_details_section",
   "school_tuition_fees",
   "amount_requested_from_st",
+  "hostel_fee",
   "hostel_requested_by_st",
   "nutrition_amount_requested_from_st",
   "column_break_gbky",
   "others_amount_requested_from_st",
-  "type_of_sponsorship"
+  "type_of_sponsorship",
+  "admission_fee",
+  "other_fee",
+  "mention_particulars_of_other_fees"
  ],
  "fields": [
   {
@@ -101,11 +101,6 @@
    "label": "Overall % scored in Previous Academic Year"
   },
   {
-   "fieldname": "top_three_subject_scores",
-   "fieldtype": "Section Break",
-   "label": "Top 3 Subject scores"
-  },
-  {
    "fieldname": "extra_curricular_interest_section",
    "fieldtype": "Section Break",
    "label": "Extra Curricular Interest"
@@ -115,17 +110,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "music",
-   "fieldtype": "Select",
-   "label": "Music ",
-   "options": "N/A\nInstrument\nSinging\nBoth"
-  },
-  {
-   "fieldname": "arts",
-   "fieldtype": "Data",
-   "label": "Arts"
-  },
-  {
    "fieldname": "dreams_and_aspirations_section",
    "fieldtype": "Section Break",
    "label": "Dreams and Aspirations"
@@ -133,7 +117,7 @@
   {
    "fieldname": "dream_job",
    "fieldtype": "Data",
-   "label": "Dream Job"
+   "label": "Dream Career"
   },
   {
    "fieldname": "column_break_dtnt",
@@ -218,21 +202,35 @@
    "read_only": 1
   },
   {
-   "fieldname": "subject_details",
-   "fieldtype": "Table",
-   "label": "Subject Scores",
-   "options": "Subject Scores"
-  },
-  {
    "fieldname": "different_sports",
    "fieldtype": "Data",
-   "label": "Different sports played"
+   "label": "Extra curricular Interest"
   },
   {
    "fetch_from": "student_id.state",
    "fieldname": "state",
    "fieldtype": "Autocomplete",
    "label": "State"
+  },
+  {
+   "fieldname": "hostel_fee",
+   "fieldtype": "Currency",
+   "label": "Hostel Fee"
+  },
+  {
+   "fieldname": "admission_fee",
+   "fieldtype": "Currency",
+   "label": "Admission Fee"
+  },
+  {
+   "fieldname": "other_fee",
+   "fieldtype": "Currency",
+   "label": "Other Fee"
+  },
+  {
+   "fieldname": "mention_particulars_of_other_fees",
+   "fieldtype": "Data",
+   "label": "Mention Particulars Of Other Fee"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -242,7 +240,7 @@
    "link_fieldname": "student_education"
   }
  ],
- "modified": "2025-02-18 02:04:28.793618",
+ "modified": "2025-02-19 15:36:02.627881",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Student Educational Detail",

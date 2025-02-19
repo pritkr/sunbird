@@ -25,7 +25,6 @@
   "hostel_fees",
   "hostel_fees_approved",
   "others",
-  "other_sponsorship_approved",
   "section_break_zhxl",
   "scholarship_start_date",
   "scholarship_end_date",
@@ -39,6 +38,7 @@
   "total_amount_of_scholarship_recieving",
   "total_approved_per_month",
   "total_approved_for_the_year",
+  "other_sponsorship_approved",
   "banking_details_section",
   "name_of_the_account_holder",
   "account_number",
@@ -129,8 +129,8 @@
   },
   {
    "fieldname": "scholarship_duration",
-   "fieldtype": "Data",
-   "label": "Scholarship Duration"
+   "fieldtype": "Int",
+   "label": "Scholarship Duration(in months)"
   },
   {
    "fieldname": "purpose_of_scholarship",
@@ -295,7 +295,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-07 16:33:08.522582",
+ "modified": "2025-02-19 15:34:01.486620",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Scholarship Details",

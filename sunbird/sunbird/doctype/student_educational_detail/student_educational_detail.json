@@ -44,9 +44,9 @@
  ],
  "fields": [
   {
-   "fetch_from": "school_id.address",
+   "fetch_from": "school_id.address_1",
    "fieldname": "school_address",
-   "fieldtype": "Small Text",
+   "fieldtype": "Data",
    "label": "School Address"
   },
   {
@@ -240,7 +240,7 @@
    "link_fieldname": "student_education"
   }
  ],
- "modified": "2025-02-19 15:36:02.627881",
+ "modified": "2025-02-20 20:50:22.248809",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Student Educational Detail",

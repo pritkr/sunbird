@@ -5,6 +5,13 @@ app_description = "This Application build for sunbird for managing their sudent 
 app_email = "hell@tech4goodcommunity.com"
 app_license = "mit"
 
+
+doc_events = {
+    "Scholarship Application": {
+        "before_save": "sunbird.custom_script.update_total_scholarship"
+    }
+}
+
 # Apps
 # ------------------
 

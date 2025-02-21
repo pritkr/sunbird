@@ -336,7 +336,7 @@
    "label": "What kind of disability?  "
   },
   {
-   "depends_on": "eval:doc.custodial_status == 'Guardian';",
+   "depends_on": "eval: doc.custodial_status == 'Guardian' || doc.custodial_status == 'Others'\r\n",
    "fieldname": "guardian_details_section",
    "fieldtype": "Section Break",
    "label": "Guardian Details"
@@ -638,7 +638,7 @@
    "label": "Parent's Aadhar Number"
   },
   {
-   "depends_on": "eval: doc.custodial_status == 'Guardian'",
+   "depends_on": "eval: doc.custodial_status == 'Guardian' || doc.custodial_status == 'Others'\r\n",
    "fieldname": "guardian_aadhar_no",
    "fieldtype": "Data",
    "label": "Guardians Aadhar Number"
@@ -651,7 +651,7 @@
    "mandatory_depends_on": "reqd: \"eval: doc.custodial_status == 'Single Parent'\"\n"
   },
   {
-   "depends_on": "eval:doc.custodial_status == 'Guardian'\r\n",
+   "depends_on": "eval: doc.custodial_status == 'Guardian' || doc.custodial_status == 'Others'\r\n",
    "fieldname": "guardians_aadhar_photo",
    "fieldtype": "Attach",
    "label": "Guardian's Aadhar Photo",
@@ -669,7 +669,7 @@
    "link_fieldname": "student_id"
   }
  ],
- "modified": "2025-02-21 17:33:58.320631",
+ "modified": "2025-02-22 00:20:56.590961",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Student Profile",

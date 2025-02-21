@@ -9,7 +9,7 @@
    "label": "Total Scholarship Value"
   }
  ],
- "content": "[{\"id\":\"pV61VP9iFs\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Sunbird Workspace</span>\",\"col\":12}},{\"id\":\"0MtIILWc2M\",\"type\":\"card\",\"data\":{\"card_name\":\"Institution Details\",\"col\":4}},{\"id\":\"5xkKhswayz\",\"type\":\"card\",\"data\":{\"card_name\":\"Student Details\",\"col\":4}},{\"id\":\"K6RGrqJKxd\",\"type\":\"card\",\"data\":{\"card_name\":\"Scholarship Details\",\"col\":4}},{\"id\":\"W3NPlaldZA\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Data Analysis</b></span>\",\"col\":12}},{\"id\":\"CGkg3N9h-k\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sunbird Data Analytics\",\"col\":5}},{\"id\":\"97qD61Tx4C\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Student Sponsorship\",\"col\":12}},{\"id\":\"k9NSF0fJin\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Total Scholarship Value\",\"col\":12}}]",
+ "content": "[{\"id\":\"pV61VP9iFs\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Sunbird Workspace</span>\",\"col\":12}},{\"id\":\"0MtIILWc2M\",\"type\":\"card\",\"data\":{\"card_name\":\"Institution Details\",\"col\":4}},{\"id\":\"5xkKhswayz\",\"type\":\"card\",\"data\":{\"card_name\":\"Student Details\",\"col\":4}},{\"id\":\"K6RGrqJKxd\",\"type\":\"card\",\"data\":{\"card_name\":\"Scholarship Details\",\"col\":4}},{\"id\":\"W3NPlaldZA\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Data Analysis</b></span>\",\"col\":12}},{\"id\":\"CGkg3N9h-k\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sunbird Data Analytics\",\"col\":5}},{\"id\":\"97qD61Tx4C\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Student Sponsorship\",\"col\":12}},{\"id\":\"k9NSF0fJin\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Total Scholarship Value\",\"col\":12}},{\"id\":\"WsHX_14uWp\",\"type\":\"card\",\"data\":{\"card_name\":\"family card\",\"col\":4}}]",
  "creation": "2024-10-14 11:41:51.484920",
  "custom_blocks": [],
  "docstatus": 0,
@@ -120,7 +120,7 @@
    "type": "Link"
   }
  ],
- "modified": "2025-02-18 01:15:00.513328",
+ "modified": "2025-02-22 00:28:15.338425",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Sunbird Workspace",

@@ -1,25 +1,17 @@
-# Copyright (c) 2024, T4GC and contributors
-# For license information, please see license.txt
-
 import frappe
-import dns.resolver
-import smtplib
 from frappe.model.document import Document
-from frappe import _
 from datetime import date
+import smtplib
+import dns.resolver
 
 class StudentProfile(Document):
     def before_save(self):
-        """Perform validations and calculations before saving the Student Profile"""
+        """Calculate age for multiple DOB fields before saving the Student Profile"""
+        self.calculate_age()
+        self.verify_emails()
 
-        # Calculate age for multiple DOB fields
-        self.calculate_ages()
-
-        # Validate multiple email fields
-        self.validate_emails()
-
-    def calculate_ages(self):
-        """Calculate age for multiple DOB fields"""
+    def calculate_age(self):
+        """Calculate age based on various date of birth fields"""
         dob_fields = [
             ("date_of_birth", "age"),
             ("fathers_date_of_birth", "father_age"),
@@ -31,53 +23,57 @@ class StudentProfile(Document):
         today = date.today()
 
         for dob_field, age_field in dob_fields:
-            dob_value = getattr(self, dob_field, None)  # Get DOB field value
-
-            if dob_value:  # Check if DOB field has a value
-                dob = frappe.utils.getdate(dob_value)  # Convert to date object
+            dob_value = getattr(self, dob_field, None)  
+            if dob_value:
+                dob = frappe.utils.getdate(dob_value)
                 age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
-                setattr(self, age_field, age)  # Set the calculated age
+                setattr(self, age_field, age)  
 
-    def validate_emails(self):
-        """Validate multiple email fields"""
-        email_fields = ["student_email_id", "mother_email_id", "father_email_id", "gaurdian_email_id"]
-        invalid_emails = []
+    def verify_emails(self):
+        """Verify multiple email fields by checking MX records and SMTP"""
+        email_fields = [
+            "student_email_id",
+            "mother_email_id",
+            "father_email_id",
+            "gaurdian_email_id",
+        ]
 
         for field in email_fields:
             email = getattr(self, field, None)
-            if email:  # Only check if email is provided
-                domain_status, smtp_status = validate_email(email)
+            if email:
+                domain = email.split("@")[-1]
+                mx_valid = self.check_mx_records(domain)
+                smtp_valid = self.check_smtp(email) if mx_valid else False
                 
-                if not domain_status:
-                    invalid_emails.append(f"Invalid domain: {field} ({email})")
-                elif not smtp_status:
-                    invalid_emails.append(f"SMTP check failed: {field} ({email})")
+                # Store verification result in Frappe Logs
+                frappe.logger().info(f"Email: {email}, MX: {mx_valid}, SMTP: {smtp_valid}")
+                
+                if not mx_valid:
+                    frappe.msgprint(f"Invalid email domain: {domain} for {field}", alert=True, indicator="red")
+                elif not smtp_valid:
+                    frappe.msgprint(f"Email address {email} could not be verified via SMTP.", alert=True, indicator="orange")
 
-        if invalid_emails:
-            frappe.throw(_("Email validation errors:\n" + "\n".join(invalid_emails)))
+    def check_mx_records(self, domain):
+        """Check MX records for a given domain"""
+        try:
+            mx_records = dns.resolver.resolve(domain, "MX")
+            return bool(mx_records)
+        except Exception as e:
+            frappe.logger().error(f"MX Lookup Failed for {domain}: {e}")
+            return False
 
-def validate_email(email):
-    """Validate email domain and check SMTP"""
-    try:
-        domain = email.split('@')[-1]
-
-        # Check if domain has MX records
-        mx_records = dns.resolver.resolve(domain, 'MX')
-        if not mx_records:
-            return False, False  # Domain check failed
-
-        # Check SMTP connection
-        mx_record = str(mx_records[0].exchange)
-        smtp = smtplib.SMTP(timeout=10)
-        smtp.connect(mx_record)
-        smtp.helo()
-        smtp.quit()
-
-        return True, True  # Both checks passed
-
-    except dns.resolver.NoAnswer:
-        return False, False  # No MX records found
-    except dns.resolver.NXDOMAIN:
-        return False, False  # Domain does not exist
-    except smtplib.SMTPException:
-        return True, False  # SMTP check failed
+    def check_smtp(self, email):
+        """Perform SMTP check to verify if email exists"""
+        domain = email.split("@")[-1]
+        try:
+            mx_records = dns.resolver.resolve(domain, "MX")
+            mx_host = str(mx_records[0].exchange)
+            server = smtplib.SMTP(mx_host, 25, timeout=5)
+            server.helo()
+            server.mail("test@example.com")  # Use a dummy sender email
+            code, _ = server.rcpt(email)
+            server.quit()
+            return code == 250  # 250 means the email is valid
+        except Exception as e:
+            frappe.logger().error(f"SMTP Check Failed for {email}: {e}")
+            return False

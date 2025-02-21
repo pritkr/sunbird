@@ -632,7 +632,7 @@
    "label": "Occupation"
   },
   {
-   "depends_on": "doc.custodial_status == 'Single Parent';",
+   "depends_on": "eval:doc.custodial_status == 'Single Parent';",
    "fieldname": "parents_aadhar_no",
    "fieldtype": "Data",
    "label": "Parent's Aadhar Number"
@@ -644,14 +644,14 @@
    "label": "Guardians Aadhar Number"
   },
   {
-   "depends_on": "doc.custodial_status == 'Single Parent';",
+   "depends_on": "eval:doc.custodial_status == 'Single Parent';",
    "fieldname": "parents_aadhar_photo",
    "fieldtype": "Attach",
    "label": "Parent's Aadhar Photo",
    "mandatory_depends_on": "reqd: \"eval: doc.custodial_status == 'Single Parent'\"\n"
   },
   {
-   "depends_on": "doc.custodial_status == 'Guardian'\r\n",
+   "depends_on": "eval:doc.custodial_status == 'Guardian'\r\n",
    "fieldname": "guardians_aadhar_photo",
    "fieldtype": "Attach",
    "label": "Guardian's Aadhar Photo",
@@ -669,7 +669,7 @@
    "link_fieldname": "student_id"
   }
  ],
- "modified": "2025-02-19 15:27:38.702720",
+ "modified": "2025-02-21 17:33:58.320631",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Student Profile",

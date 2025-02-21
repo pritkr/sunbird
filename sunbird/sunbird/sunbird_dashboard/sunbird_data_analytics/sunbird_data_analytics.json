@@ -10,9 +10,6 @@
    "card": "Total number of Hostel fee-sponsored students"
   },
   {
-   "card": "Total number of Tuition fee-sponsored students"
-  },
-  {
    "card": "Total number of  higher education students sponsored"
   },
   {
@@ -39,7 +36,7 @@
    "width": "Half"
   },
   {
-   "chart": "Total Scholorship Value",
+   "chart": "Total Scholarship Value",
    "width": "Half"
   },
   {
@@ -51,10 +48,10 @@
  "dashboard_name": "Sunbird Data Analytics",
  "docstatus": 0,
  "doctype": "Dashboard",
- "idx": 3,
+ "idx": 5,
  "is_default": 0,
  "is_standard": 1,
- "modified": "2024-11-07 12:35:20.047183",
+ "modified": "2025-02-22 00:30:39.742416",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Sunbird Data Analytics",

@@ -10,6 +10,7 @@
   "type_of_institution",
   "year_of_establishment",
   "purpose_of_establishment",
+  "sunbird_trust_program",
   "column_break_nusx",
   "address_1",
   "address_line_2",
@@ -40,7 +41,14 @@
   "name_of_the_account_holder",
   "account_number",
   "ifsc",
-  "upload_photocopy_of_passbookcancelled_cheque"
+  "upload_photocopy_of_passbookcancelled_cheque",
+  "document_upload_section",
+  "table_nnhr",
+  "sanction_letters",
+  "reciepts",
+  "attendance_reports",
+  "students_lists",
+  "recce"
  ],
  "fields": [
   {
@@ -234,6 +242,54 @@
    "fieldname": "landmark",
    "fieldtype": "Data",
    "label": "Landmark"
+  },
+  {
+   "fieldname": "sunbird_trust_program",
+   "fieldtype": "Select",
+   "label": "Sunbird Trust Program",
+   "options": "Access for All (AFA)\nSchool Transformation Programme (STP)\nGovt. School Transformation Programme (GSTP)"
+  },
+  {
+   "fieldname": "document_upload_section",
+   "fieldtype": "Section Break",
+   "label": "Document upload"
+  },
+  {
+   "fieldname": "table_nnhr",
+   "fieldtype": "Table",
+   "label": "Documents upload",
+   "options": "institute-doc upload"
+  },
+  {
+   "fieldname": "sanction_letters",
+   "fieldtype": "Table",
+   "label": "Sanction Letters",
+   "options": "Sanction letters-institute"
+  },
+  {
+   "columns": 2,
+   "fieldname": "reciepts",
+   "fieldtype": "Table",
+   "label": "Reciepts",
+   "options": "Reciepts-Institute"
+  },
+  {
+   "fieldname": "attendance_reports",
+   "fieldtype": "Table",
+   "label": "Attendance Reports",
+   "options": "Attendance Reports-Institute"
+  },
+  {
+   "fieldname": "students_lists",
+   "fieldtype": "Table",
+   "label": "Students Lists",
+   "options": "Students Lists-institute"
+  },
+  {
+   "fieldname": "recce",
+   "fieldtype": "Table",
+   "label": "RECCE",
+   "options": "RECCE-institute"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -247,7 +303,7 @@
    "link_fieldname": "institute_id"
   }
  ],
- "modified": "2025-02-19 15:15:12.823571",
+ "modified": "2025-05-14 17:28:51.157733",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Institute Profile",

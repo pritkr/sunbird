@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-14 16:12:29.280494",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "document_upload_section",
+  "pan_card",
+  "12_a",
+  "80_g",
+  "school_registration_certificate",
+  "trust_registration_certificate",
+  "bank_passbook",
+  "mou"
+ ],
+ "fields": [
+  {
+   "fieldname": "document_upload_section",
+   "fieldtype": "Section Break",
+   "label": "Document upload"
+  },
+  {
+   "fieldname": "pan_card",
+   "fieldtype": "Attach",
+   "label": "PAN Card"
+  },
+  {
+   "fieldname": "12_a",
+   "fieldtype": "Attach",
+   "label": "12 A"
+  },
+  {
+   "fieldname": "80_g",
+   "fieldtype": "Attach",
+   "label": "80 G"
+  },
+  {
+   "fieldname": "school_registration_certificate",
+   "fieldtype": "Attach",
+   "label": "School Registration Certificate"
+  },
+  {
+   "fieldname": "trust_registration_certificate",
+   "fieldtype": "Attach",
+   "label": "Trust Registration Certificate"
+  },
+  {
+   "fieldname": "bank_passbook",
+   "fieldtype": "Attach",
+   "label": "Bank Passbook"
+  },
+  {
+   "fieldname": "mou",
+   "fieldtype": "Attach",
+   "label": "MoU"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-05-14 17:18:52.316564",
+ "modified_by": "Administrator",
+ "module": "Sunbird",
+ "name": "institute-doc upload",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

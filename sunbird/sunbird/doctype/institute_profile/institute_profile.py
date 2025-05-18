@@ -8,7 +8,10 @@ class InstituteProfile(Document):
         if self.email_id:
             status, message = verify_email(self.email_id)
             if not status:
-                frappe.throw(f"Email verification failed: {message}")
+                if "MX" in message or "Domain" in message:
+                    frappe.throw(f"Email verification failed: {message}")  # critical failure
+                else:
+                    frappe.msgprint(f"Warning: {message}")  # soft warning, allow save
 
 def verify_email(email):
     domain = email.split('@')[-1]

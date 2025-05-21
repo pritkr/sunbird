@@ -44,6 +44,7 @@ def verify_email(email):
     except smtplib.SMTPConnectError:
         return False, f"Unable to connect to mail server {mail_server}."
     except smtplib.SMTPServerDisconnected:
+        frappe.logger().error(f"Mail server {mail_server} disconnected unexpectedly.")
         return False, f"Mail server {mail_server} disconnected unexpectedly."
     except smtplib.SMTPException as e:
         return False, f"SMTP verification error: {str(e)}"

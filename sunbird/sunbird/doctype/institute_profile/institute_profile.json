@@ -31,7 +31,6 @@
   "phone_number",
   "email_id",
   "mou_status",
-  "mou_pdf_upload",
   "column_break_qsnh",
   "is_the_school_part_of_a_registered_trustsociety",
   "attachments",
@@ -41,20 +40,28 @@
   "name_of_the_account_holder",
   "account_number",
   "ifsc",
+  "documents_section",
+  "pan_card",
   "upload_photocopy_of_passbookcancelled_cheque",
+  "mou_pdf_upload",
+  "12a",
+  "column_break_yees",
+  "80g",
+  "trust_registration_certificate",
+  "school_registration_certificate",
   "document_upload_section",
-  "table_nnhr",
+  "table_yabo",
   "sanction_letters",
   "reciepts",
   "attendance_reports",
-  "students_lists",
   "recce"
  ],
  "fields": [
   {
    "fieldname": "institute_name",
    "fieldtype": "Data",
-   "label": "Institute Name"
+   "label": "Institute Name",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_nusx",
@@ -177,7 +184,7 @@
   {
    "fieldname": "upload_photocopy_of_passbookcancelled_cheque",
    "fieldtype": "Attach",
-   "label": "Upload photocopy of passbook/cancelled cheque"
+   "label": "Upload photocopy of bank passbook/cancelled cheque"
   },
   {
    "fieldname": "mou_status",
@@ -252,13 +259,7 @@
   {
    "fieldname": "document_upload_section",
    "fieldtype": "Section Break",
-   "label": "Document upload"
-  },
-  {
-   "fieldname": "table_nnhr",
-   "fieldtype": "Table",
-   "label": "Documents upload",
-   "options": "institute-doc upload"
+   "label": "Reccuring Documents"
   },
   {
    "fieldname": "sanction_letters",
@@ -280,16 +281,50 @@
    "options": "Attendance Reports-Institute"
   },
   {
-   "fieldname": "students_lists",
-   "fieldtype": "Table",
-   "label": "Students Lists",
-   "options": "Students Lists-institute"
-  },
-  {
    "fieldname": "recce",
    "fieldtype": "Table",
-   "label": "RECCE",
+   "label": "RECCE Reports",
    "options": "RECCE-institute"
+  },
+  {
+   "fieldname": "pan_card",
+   "fieldtype": "Attach",
+   "label": "PAN Card"
+  },
+  {
+   "fieldname": "documents_section",
+   "fieldtype": "Section Break",
+   "label": "Documents"
+  },
+  {
+   "fieldname": "12a",
+   "fieldtype": "Attach",
+   "label": "12A"
+  },
+  {
+   "fieldname": "80g",
+   "fieldtype": "Attach",
+   "label": "80G"
+  },
+  {
+   "fieldname": "school_registration_certificate",
+   "fieldtype": "Attach",
+   "label": "School Registration Certificate"
+  },
+  {
+   "fieldname": "trust_registration_certificate",
+   "fieldtype": "Attach",
+   "label": "Trust Registration Certificate"
+  },
+  {
+   "fieldname": "column_break_yees",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "table_yabo",
+   "fieldtype": "Table",
+   "label": "Student List",
+   "options": "Students Lists-institute"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -303,7 +338,7 @@
    "link_fieldname": "institute_id"
   }
  ],
- "modified": "2025-05-14 17:28:51.157733",
+ "modified": "2025-05-21 15:53:42.077870",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Institute Profile",

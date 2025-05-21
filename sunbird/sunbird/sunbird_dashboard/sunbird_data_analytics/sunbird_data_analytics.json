@@ -40,7 +40,7 @@
    "width": "Half"
   },
   {
-   "chart": "Total Scholarship Recieved",
+   "chart": "Total Scholarship Given",
    "width": "Half"
   }
  ],
@@ -51,7 +51,7 @@
  "idx": 5,
  "is_default": 0,
  "is_standard": 1,
- "modified": "2025-02-22 00:30:39.742416",
+ "modified": "2025-05-21 15:21:55.800200",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Sunbird Data Analytics",

@@ -252,9 +252,9 @@
   },
   {
    "fieldname": "sunbird_trust_program",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Sunbird Trust Program",
-   "options": "Access for All (AFA)\nSchool Transformation Programme (STP)\nGovt. School Transformation Programme (GSTP)"
+   "options": "Sunbird program-institute"
   },
   {
    "fieldname": "document_upload_section",
@@ -338,7 +338,7 @@
    "link_fieldname": "institute_id"
   }
  ],
- "modified": "2025-05-21 15:53:42.077870",
+ "modified": "2025-05-22 12:00:08.334515",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Institute Profile",
@@ -359,7 +359,6 @@
   },
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "if_owner": 1,
@@ -374,11 +373,23 @@
    "create": 1,
    "email": 1,
    "export": 1,
+   "if_owner": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "Institute POC",
-   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sunbird Admin",
    "share": 1,
    "write": 1
   }

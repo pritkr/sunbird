@@ -240,7 +240,7 @@
    "link_fieldname": "student_education"
   }
  ],
- "modified": "2025-02-20 20:50:22.248809",
+ "modified": "2025-05-22 12:55:52.238966",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Student Educational Detail",
@@ -256,6 +256,40 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sunbird Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sunbird Staff Member",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Institute POC",
    "share": 1,
    "write": 1
   }

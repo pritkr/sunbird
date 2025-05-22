@@ -13,18 +13,22 @@
   {
    "fieldname": "date",
    "fieldtype": "Date",
-   "label": "Date"
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
   },
   {
    "fieldname": "attendance_reports",
    "fieldtype": "Attach",
-   "label": "Attendance Reports "
+   "in_list_view": 1,
+   "label": "Attendance Reports ",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-05-14 17:25:59.970206",
+ "modified": "2025-05-22 11:56:20.065604",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Attendance Reports-Institute",

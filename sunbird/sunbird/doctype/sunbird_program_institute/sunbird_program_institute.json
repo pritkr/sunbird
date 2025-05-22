@@ -1,28 +1,29 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:state",
- "creation": "2024-10-01 12:36:45.319141",
+ "autoname": "format:{name_of_program}",
+ "creation": "2025-05-22 11:29:52.811183",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "state"
+  "name_of_program"
  ],
  "fields": [
   {
-   "fieldname": "state",
+   "fieldname": "name_of_program",
    "fieldtype": "Data",
-   "label": "State",
-   "unique": 1
+   "in_list_view": 1,
+   "label": "Name of program",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-22 12:07:42.201672",
+ "modified": "2025-05-22 11:53:49.540933",
  "modified_by": "Administrator",
  "module": "Sunbird",
- "name": "State",
- "naming_rule": "By fieldname",
+ "name": "Sunbird program-institute",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -38,18 +39,17 @@
    "write": 1
   },
   {
-   "create": 1,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Institute POC",
-   "select": 1,
+   "role": "Sunbird Staff Member",
    "share": 1
   },
   {
    "create": 1,
+   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -60,19 +60,17 @@
    "write": 1
   },
   {
-   "create": 1,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Sunbird Staff Member",
-   "share": 1,
-   "write": 1
+   "role": "Institute POC",
+   "share": 1
   }
  ],
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],
- "title_field": "state"
+ "title_field": "name_of_program"
 }

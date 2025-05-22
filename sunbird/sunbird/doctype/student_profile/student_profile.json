@@ -23,6 +23,7 @@
   "state",
   "photo",
   "custodial_status",
+  "custom_custodial_status",
   "fathers_details",
   "fathers_name",
   "fathers_date_of_birth",
@@ -99,12 +100,14 @@
    "fieldname": "student_name",
    "fieldtype": "Data",
    "in_global_search": 1,
-   "label": "Student Name"
+   "label": "Student Name",
+   "reqd": 1
   },
   {
    "fieldname": "date_of_birth",
    "fieldtype": "Date",
-   "label": "Date of Birth"
+   "label": "Date of Birth",
+   "reqd": 1
   },
   {
    "fieldname": "age",
@@ -318,7 +321,7 @@
    "label": "What kind of disability?  "
   },
   {
-   "depends_on": "eval:doc.custodial_status == 'Guardian';",
+   "depends_on": "eval: doc.custodial_status == 'Guardian' || doc.custodial_status == 'Single Parent' || doc.custodial_status == 'Other'\r\n",
    "fieldname": "guardian_details_section",
    "fieldtype": "Section Break",
    "label": "Guardian Details"
@@ -507,7 +510,7 @@
    "fieldname": "custodial_status",
    "fieldtype": "Select",
    "label": "Custodial Status",
-   "options": "Parent\nGuardian"
+   "options": "Parent\nGuardian\nSingle Parent\nOther"
   },
   {
    "fieldname": "father_age",
@@ -523,6 +526,12 @@
    "fieldname": "gaurdian_age",
    "fieldtype": "Int",
    "label": "Age"
+  },
+  {
+   "depends_on": "eval:doc.custodial_status==\"Other\"",
+   "fieldname": "custom_custodial_status",
+   "fieldtype": "Data",
+   "label": "Custom Custodial Status"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -536,7 +545,7 @@
    "link_fieldname": "student_id"
   }
  ],
- "modified": "2025-04-02 15:27:53.990953",
+ "modified": "2025-05-22 13:11:33.153041",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Student Profile",
@@ -570,7 +579,6 @@
   },
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "import": 1,
@@ -578,6 +586,18 @@
    "read": 1,
    "report": 1,
    "role": "Sunbird Staff Member",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sunbird Admin",
    "share": 1,
    "write": 1
   }

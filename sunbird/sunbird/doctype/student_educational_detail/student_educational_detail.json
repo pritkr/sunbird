@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format: {student_name}-{YYYY}-{####}",
  "creation": "2024-10-03 09:07:12.348779",
@@ -75,6 +76,9 @@
   {
    "fieldname": "current_year_class",
    "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Current Year Class(with division)"
   },
   {
@@ -85,6 +89,8 @@
   {
    "fieldname": "medium_of_instruction",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Medium of Instruction",
    "options": "English\nRegional Language"
   },
@@ -240,7 +246,7 @@
    "link_fieldname": "student_education"
   }
  ],
- "modified": "2025-05-22 12:55:52.238966",
+ "modified": "2025-06-03 11:56:02.134754",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Student Educational Detail",
@@ -264,6 +270,7 @@
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,
@@ -297,5 +304,7 @@
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],
- "title_field": "student_name"
+ "title_field": "student_name",
+ "track_changes": 1,
+ "track_views": 1
 }

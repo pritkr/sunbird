@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:point_of_contact_name",
  "creation": "2024-10-01 12:46:41.357808",
@@ -10,8 +11,7 @@
   "institute_name",
   "point_of_contact_name",
   "email_id",
-  "phone_number",
-  "user_id"
+  "phone_number"
  ],
  "fields": [
   {
@@ -45,17 +45,11 @@
    "fieldname": "institute_name",
    "fieldtype": "Data",
    "label": "Institute Name"
-  },
-  {
-   "fieldname": "user_id",
-   "fieldtype": "Link",
-   "label": "User ID",
-   "options": "User"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-22 12:12:14.151578",
+ "modified": "2025-06-03 11:57:13.075876",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Institute POC",
@@ -79,6 +73,7 @@
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,
@@ -110,5 +105,6 @@
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],
- "title_field": "point_of_contact_name"
+ "title_field": "point_of_contact_name",
+ "track_changes": 1
 }

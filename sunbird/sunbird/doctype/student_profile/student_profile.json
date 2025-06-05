@@ -463,8 +463,7 @@
   {
    "fieldname": "student_aadhaar_number",
    "fieldtype": "Data",
-   "label": "Student's Aadhaar Number",
-   "reqd": 1
+   "label": "Student's Aadhaar Number"
   },
   {
    "fieldname": "column_break_tsnh",
@@ -473,8 +472,7 @@
   {
    "fieldname": "student_aadhaar_photo",
    "fieldtype": "Attach Image",
-   "label": "Student's Aadhaar Photo",
-   "reqd": 1
+   "label": "Student's Aadhaar Photo"
   },
   {
    "fieldname": "father_aadhaar_number",
@@ -545,7 +543,7 @@
    "link_fieldname": "student_id"
   }
  ],
- "modified": "2025-05-22 13:11:33.153041",
+ "modified": "2025-06-03 11:57:29.436703",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Student Profile",
@@ -594,6 +592,7 @@
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,
@@ -605,5 +604,7 @@
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],
- "title_field": "student_name"
+ "title_field": "student_name",
+ "track_changes": 1,
+ "track_views": 1
 }

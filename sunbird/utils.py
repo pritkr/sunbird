@@ -2,32 +2,6 @@ import frappe
 import dns.resolver
 import smtplib
 
-def verify_email_sync(email):
-    """Light MX record check (safe for before_save)"""
-    domain = email.split('@')[-1]
-    try:
-        mx_records = dns.resolver.resolve(domain, 'MX')
-        if not mx_records:
-            return False, f"Domain {domain} has no MX records."
-        return True, "Domain has MX records."
-    except dns.resolver.NoAnswer:
-        return False, f"Domain {domain} has no MX records."
-    except dns.resolver.NXDOMAIN:
-        return False, f"Domain {domain} does not exist."
-    except Exception as e:
-        return False, f"MX lookup failed: {str(e)}"
-
-def enqueue_email_verification(docname, email):
-    """Run full SMTP check in background"""
-    frappe.enqueue(
-        method="sunbird.sunbird.utils.verify_email_async",
-        queue='long',
-        timeout=60,
-        now=False,
-        docname=docname,
-        email=email
-    )
-
 def verify_email_async(docname, email):
     """SMTP check and update the document"""
     domain = email.split('@')[-1]

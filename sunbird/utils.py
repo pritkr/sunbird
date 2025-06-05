@@ -20,7 +20,7 @@ def verify_email_sync(email):
 def enqueue_email_verification(docname, email):
     """Run full SMTP check in background"""
     frappe.enqueue(
-        method="your_app.your_module.utils.verify_email_async",
+        method="sunbird.sunbird.utils.verify_email_async",
         queue='long',
         timeout=60,
         now=False,
@@ -45,7 +45,8 @@ def verify_email_async(docname, email):
     # Step 2: SMTP deliverability check
     mail_server = str(mx_records[0].exchange)
     try:
-        server = smtplib.SMTP(mail_server, 25, timeout=10)
+        server = smtplib.SMTP(mail_server, 587, timeout=10)  # Use port 587 with STARTTLS
+        server.starttls()
         server.helo()
         server.mail("noreply@example.com")
         response_code, _ = server.rcpt(email)
@@ -59,9 +60,13 @@ def verify_email_async(docname, email):
         update_status(docname, f"SMTP error: {str(e)}")
 
 def update_status(docname, status):
-    """Helper to update the verification status field"""
+    """Update both the status and checkbox based on result"""
     try:
         doc = frappe.get_doc("Institute Profile", docname)
-        doc.db_set("email_verification_status", status)
+        is_verified = status.lower() == "deliverable"
+        doc.db_set({
+            "email_verification_status": status,
+            "email_verification_done": 1 if is_verified else 0
+        })
     except Exception as e:
         frappe.logger().error(f"Failed to update email status: {str(e)}")

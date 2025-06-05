@@ -41,6 +41,8 @@
   "name_of_the_account_holder",
   "account_number",
   "ifsc",
+  "email_verification_status",
+  "email_verification_done",
   "documents_section",
   "pan_card",
   "upload_photocopy_of_passbookcancelled_cheque",
@@ -332,6 +334,18 @@
    "fieldname": "udise",
    "fieldtype": "Attach",
    "label": "UDISE"
+  },
+  {
+   "default": "0",
+   "fieldname": "email_verification_status",
+   "fieldtype": "Check",
+   "label": "Email Verification Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "email_verification_done",
+   "fieldtype": "Data",
+   "label": "Email Verification Done"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -345,7 +359,7 @@
    "link_fieldname": "institute_id"
   }
  ],
- "modified": "2025-06-03 12:00:56.941340",
+ "modified": "2025-06-05 17:46:15.117246",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Institute Profile",

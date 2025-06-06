@@ -55,9 +55,9 @@ frappe.ui.form.on('Institute Profile', {
                         }, 5);
                         if (r.message.email_verification_status) {
                             frm.set_value('email_verification_status', 1);
-                            frm.set_df_property('verify_email', 'hidden', 0);
                         }
                     }
+                    frm.set_df_property('verify_email', 'hidden', 0);
                 }
             });
         }

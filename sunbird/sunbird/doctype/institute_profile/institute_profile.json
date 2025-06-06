@@ -29,8 +29,6 @@
   "institution_photos",
   "institute_poc",
   "institute_user_id",
-  "phone_number",
-  "email_id",
   "mou_status",
   "column_break_qsnh",
   "is_the_school_part_of_a_registered_trustsociety",
@@ -41,8 +39,14 @@
   "name_of_the_account_holder",
   "account_number",
   "ifsc",
+  "section_break_ipcn",
+  "email_id",
   "email_verification_status",
-  "email_verification_done",
+  "column_break_oprw",
+  "space",
+  "verify_email",
+  "column_break_vqnv",
+  "phone_number",
   "documents_section",
   "pan_card",
   "upload_photocopy_of_passbookcancelled_cheque",
@@ -337,15 +341,37 @@
   },
   {
    "default": "0",
-   "fieldname": "email_verification_status",
-   "fieldtype": "Check",
-   "label": "Email Verification Status",
-   "read_only": 1
+   "description": "Click this button to verify the email id.",
+   "fieldname": "verify_email",
+   "fieldtype": "Button",
+   "label": "Verify Email",
+   "max_height": "30px",
+   "width": "20px"
   },
   {
-   "fieldname": "email_verification_done",
-   "fieldtype": "Data",
-   "label": "Email Verification Done"
+   "fieldname": "section_break_ipcn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_oprw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vqnv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "space",
+   "fieldtype": "Heading",
+   "label": "&nbsp;"
+  },
+  {
+   "default": "0",
+   "fieldname": "email_verification_status",
+   "fieldtype": "Check",
+   "label": "Email Verified",
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -359,7 +385,7 @@
    "link_fieldname": "institute_id"
   }
  ],
- "modified": "2025-06-05 17:46:15.117246",
+ "modified": "2025-06-06 07:27:42.060545",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Institute Profile",
@@ -416,6 +442,7 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "show_name_in_global_search": 1,
  "show_title_field_in_link": 1,
  "sort_field": "creation",

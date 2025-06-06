@@ -1,46 +1,52 @@
 import frappe
 import dns.resolver
 import smtplib
+@frappe.whitelist()
+def email_verification(email):
+    """Validates an email address by checking DNS, MX, and SMTP (RCPT TO)"""
 
-def verify_email_async(docname, email):
-    """SMTP check and update the document"""
-    domain = email.split('@')[-1]
+    # Step 0: Basic email format validation
+    if not email or "@" not in email:
+        return {"message": "Please provide a valid email address.", "indicator": "orange"}
 
-    # Step 1: MX check again (to avoid retrying SMTP blindly)
+    local_part, domain = email.split('@', 1)
+
+    if not local_part or not domain:
+        return {"message": "Incomplete email address.", "indicator": "orange"}
+
+    # Step 1: DNS & MX Validation
+    try:
+        dns.resolver.resolve(domain, 'A')  # check domain has A record
+    except (dns.resolver.NXDOMAIN, dns.resolver.NoAnswer, dns.resolver.Timeout):
+        return {"message": f"Domain {domain} is not valid (DNS A record not found).", "indicator": "orange"}
+
     try:
         mx_records = dns.resolver.resolve(domain, 'MX')
         if not mx_records:
-            update_status(docname, "Invalid domain: No MX records")
-            return
+            return {"message": f"Domain {domain} has no MX records (no email server).", "indicator": "orange"}
+    except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN, dns.resolver.Timeout):
+        return {"message": f"Domain {domain} has no valid MX records.", "indicator": "orange"}
     except Exception as e:
-        update_status(docname, f"MX check failed: {str(e)}")
-        return
+        return {"message": f"MX check failed: {str(e)}", "indicator": "orange"}
 
-    # Step 2: SMTP deliverability check
+    # Step 2: SMTP verification (RCPT TO)
     mail_server = str(mx_records[0].exchange)
     try:
-        server = smtplib.SMTP(mail_server, 587, timeout=10)  # Use port 587 with STARTTLS
-        server.starttls()
-        server.helo()
-        server.mail("noreply@example.com")
-        response_code, _ = server.rcpt(email)
-        server.quit()
+        smtp = smtplib.SMTP(mail_server, 25, timeout=10)
+        smtp.starttls()
+        smtp.helo()
+        smtp.mail("noreply@example.com")
+        code, _ = smtp.rcpt(email)
+        smtp.quit()
 
-        if response_code == 250:
-            update_status(docname, "Deliverable")
+        if code == 250:
+            return {"message": f"Email address {email} is valid and deliverable.", "indicator": "green", "email_verification_status": True}
         else:
-            update_status(docname, f"Undeliverable (SMTP {response_code})")
-    except Exception as e:
-        update_status(docname, f"SMTP error: {str(e)}")
+            return {"message": f"Domain is valid, but email {email} is not deliverable (SMTP code {code}).", "indicator": "orange"}
 
-def update_status(docname, status):
-    """Update both the status and checkbox based on result"""
-    try:
-        doc = frappe.get_doc("Institute Profile", docname)
-        is_verified = status.lower() == "deliverable"
-        doc.db_set({
-            "email_verification_status": status,
-            "email_verification_done": 1 if is_verified else 0
-        })
+    except smtplib.SMTPServerDisconnected:
+        return {"message": f"SMTP server {mail_server} disconnected unexpectedly. Could not verify {email}.", "indicator": "orange"}
+    except smtplib.SMTPRecipientsRefused:
+        return {"message": f"Domain {domain} is valid, but recipient {email} was refused.", "indicator": "orange"}
     except Exception as e:
-        frappe.logger().error(f"Failed to update email status: {str(e)}")
+        return {"message":"Something went wrong! unable to verify email at this moment please try again after some time or check the email address", "indicator": "orange"}

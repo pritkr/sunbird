@@ -1,14 +1,6 @@
 import frappe
 from frappe.model.document import Document
-from sunbird.utils import verify_email_async
 
 class InstituteProfile(Document):
-    def before_save(self):
-        if self.email_id:
-            status, message = verify_email_async(self.email_id)
-            if not status:
-                if "MX" in message or "Domain" in message:
-                    frappe.throw(f"Email verification failed: {message}")
-                else:
-                    frappe.msgprint(f"Warning: {message}")
+    pass
             

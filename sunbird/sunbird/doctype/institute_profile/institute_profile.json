@@ -149,7 +149,7 @@
   },
   {
    "fieldname": "institution_photos",
-   "fieldtype": "Attach Image",
+   "fieldtype": "Attach",
    "label": "Institution Photos"
   },
   {
@@ -385,7 +385,7 @@
    "link_fieldname": "institute_id"
   }
  ],
- "modified": "2025-06-06 07:27:42.060545",
+ "modified": "2026-01-15 18:05:27.240203",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Institute Profile",

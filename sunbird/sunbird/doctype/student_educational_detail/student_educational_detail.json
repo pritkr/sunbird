@@ -193,7 +193,7 @@
   {
    "fieldname": "date_of_student_added",
    "fieldtype": "Date",
-   "label": "Date of Student Added"
+   "label": "Date of joining Sunbird Sponsorship"
   },
   {
    "fieldname": "type_of_sponsorship",
@@ -246,7 +246,7 @@
    "link_fieldname": "student_education"
   }
  ],
- "modified": "2025-06-03 11:56:02.134754",
+ "modified": "2026-01-15 18:20:22.794152",
  "modified_by": "Administrator",
  "module": "Sunbird",
  "name": "Student Educational Detail",
@@ -301,6 +301,7 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],
